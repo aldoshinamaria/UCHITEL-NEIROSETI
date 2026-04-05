@@ -136,11 +136,11 @@
   justify-content: center;
   font-family: var(--font-display);
   font-size: 0.95rem;
-  font-weight: 800;
+  font-weight: 700;
   color: #faf5ff;
   background: linear-gradient(145deg, #7c3aed, #a78bfa 55%, #5b21b6);
   box-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
 .reviews-marquee-card__meta {
@@ -152,9 +152,9 @@
   font-family: var(--font-display);
   font-size: 0.95rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   color: var(--text);
-  line-height: 1.25;
+  line-height: 1.2;
 }
 
 .reviews-marquee-card__role {

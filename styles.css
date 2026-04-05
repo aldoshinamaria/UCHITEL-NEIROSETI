@@ -101,6 +101,24 @@ body > * {
   z-index: 2;
 }
 
+/* Единая типографика заголовков */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2,
+h3 {
+  line-height: 1.2;
+}
+
 /* SplashCursor WebGL: над основым контентом, под шапкой (100) и модалками */
 body > .splash-cursor-wrap {
   position: fixed;
@@ -514,11 +532,8 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .hero__title {
   margin: 0 0 1rem;
-  font-family: var(--font-display);
   font-size: clamp(2rem, 5vw, 2.85rem);
-  font-weight: 800;
   line-height: 1.12;
-  letter-spacing: -0.035em;
   animation: hero-rise 0.75s var(--ease-out-expo) forwards;
   opacity: 0;
 }
@@ -679,11 +694,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 .section__title {
   margin: 0 auto 0.75rem;
   max-width: min(100%, 38rem);
-  font-family: var(--font-display);
   font-size: clamp(1.5rem, 3.2vw, 2rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.2;
   text-align: center;
   position: relative;
   padding-bottom: 1rem;
@@ -800,10 +811,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .card__title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
-  font-size: 1.08rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.15rem;
 }
 
 .card__meta {
@@ -926,10 +934,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .modal__title {
   margin: 0 0 1.25rem;
-  font-family: var(--font-display);
-  font-size: 1.28rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.25rem;
   padding-right: 1.5rem;
 }
 
@@ -1053,11 +1058,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .idea-card__title {
   margin: 0 0 0.5rem;
-  font-family: var(--font-display);
-  font-size: 1.22rem;
-  font-weight: 700;
-  line-height: 1.25;
-  letter-spacing: -0.02em;
+  font-size: 1.25rem;
 }
 
 .idea-card__meta {
@@ -1225,6 +1226,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   font-size: 1.45rem;
   font-weight: 700;
   letter-spacing: -0.03em;
+  line-height: 1.2;
   color: var(--text);
   text-align: center;
 }
