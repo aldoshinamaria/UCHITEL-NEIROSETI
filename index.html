@@ -1,6 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
+  <script>
+    try {
+      if (localStorage.getItem("theme") === "light") document.documentElement.dataset.theme = "light";
+    } catch (e) {}
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Учитель&amp;Нейросети — материалы и курсы</title>
@@ -8,11 +13,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="reviews-marquee.css">
+  <link rel="stylesheet" href="gradient-text.css">
+  <link rel="stylesheet" href="border-glow.css">
 </head>
 <body>
+  <div class="splash-cursor-wrap" aria-hidden="true">
+    <canvas id="splash-cursor-canvas"></canvas>
+  </div>
   <header class="header">
     <div class="container header__inner">
-      <a href="#" class="logo">Учитель&amp;Нейросети</a>
+      <a href="#" class="logo">Учитель<span class="gradient-text">&amp;Нейросети</span></a>
       <nav class="nav" aria-label="Основное меню">
         <a href="#materials">Материалы</a>
         <span class="nav__sep">|</span>
@@ -24,7 +35,29 @@
         <span class="nav__sep">|</span>
         <a href="#about">Обо мне</a>
       </nav>
-      <a href="#contact" class="btn btn--header">👉 Написать мне</a>
+      <div class="header__end">
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Включить светлую тему"
+          aria-pressed="false"
+          title="Светлая / тёмная тема"
+        >
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+            </svg>
+          </span>
+        </button>
+        <a href="#contact" class="btn btn--header">👉 Написать мне</a>
+      </div>
     </div>
   </header>
 
@@ -32,30 +65,61 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__media">
-          <figure class="hero__figure">
+          <figure class="hero__figure" aria-label="Мария Алдошина с материалами по нейросетям и роботом AI">
             <img
               class="hero__img"
-              src="images/hero-photo.png"
-              alt="Мария Алдошина — педагог, использование ИИ и ChatGPT на уроке"
+              src="images/hero-maria-ai.png"
+              alt="Мария Алдошина с листами про нейросети и небольшим роботом AI"
               loading="eager"
               decoding="async"
+              width="900"
+              height="1200"
             >
           </figure>
         </div>
-        <div class="hero__content">
-          <h1 class="hero__title">Тратите вечера на подготовку к урокам?</h1>
-          <p class="hero__lead">Покажу, как делать презентации, тесты, видео и отчёты в 2–3 раза быстрее</p>
-          <p class="hero__note">Даже если вы никогда не работали с нейросетями</p>
-          <div class="hero__actions">
-            <a href="#materials" class="btn btn--primary">Получить готовые материалы</a>
-            <a href="#courses" class="btn btn--outline">Начать обучение</a>
-            <a href="#contact" class="btn btn--ghost">Написать</a>
+        <div
+          class="border-glow-card hero__border-glow"
+          data-border-glow
+          data-border-radius="24"
+          data-edge-sensitivity="30"
+          data-glow-color="268 85 78"
+          data-glow-intensity="1"
+          data-glow-radius="38"
+          data-cone-spread="25"
+          data-fill-opacity="0.48"
+          data-border-glow-colors='["#c084fc","#f472b6","#38bdf8"]'
+        >
+          <div class="edge-light" aria-hidden="true"></div>
+          <div class="border-glow-inner">
+            <div class="hero__content">
+              <h1
+                class="hero__title"
+                data-blur-text
+                data-blur-delay="180"
+                data-blur-direction="top"
+                data-blur-by="words"
+              >Тратите вечера на подготовку к урокам?</h1>
+              <p
+                class="hero__lead"
+                data-blur-text
+                data-blur-delay="140"
+                data-blur-start-delay="520"
+                data-blur-direction="top"
+                data-blur-by="words"
+              >Покажу, как делать презентации, тесты, видео и отчёты в 2–3 раза быстрее</p>
+              <p class="hero__note">Даже если вы никогда не работали с нейросетями</p>
+              <div class="hero__actions">
+                <a href="#materials" class="btn btn--primary">Получить готовые материалы</a>
+                <a href="#courses" class="btn btn--outline">Начать обучение</a>
+                <a href="#contact" class="btn btn--ghost">Написать</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section--soft" id="for-you">
+    <section class="section section--soft reveal" id="for-you">
       <div class="container">
         <h2 class="section__title">Вам точно подойдёт, если:</h2>
         <ul class="cards-grid cards-grid--6">
@@ -69,7 +133,7 @@
       </div>
     </section>
 
-    <section class="section" id="materials">
+    <section class="section reveal" id="materials">
       <div class="container">
         <h2 class="section__title">Заберите готовые материалы и используйте уже сегодня</h2>
         <p class="section__subtitle">Скачайте и сократите подготовку к уроку уже сейчас</p>
@@ -120,7 +184,7 @@
       </div>
     </div>
 
-    <section class="section section--accent" id="ideas">
+    <section class="section section--accent reveal" id="ideas">
       <div class="container">
         <h2 class="section__title section__title--light">Не знаете, как использовать нейросети на уроке?</h2>
         <p class="ideas__cta-wrap">
@@ -154,7 +218,7 @@
       </div>
     </section>
 
-    <section class="section" id="courses">
+    <section class="section reveal" id="courses">
       <div class="container">
         <h2 class="section__title">Короткие курсы с результатом</h2>
         <div class="cards-grid cards-grid--4">
@@ -186,7 +250,7 @@
       </div>
     </section>
 
-    <section class="section section--dark" id="main-course">
+    <section class="section section--dark reveal" id="main-course">
       <div class="container">
         <h2 class="section__title section__title--light">Полная система работы учителя</h2>
         <div class="main-course">
@@ -207,7 +271,7 @@
       </div>
     </section>
 
-    <section class="section" id="works">
+    <section class="section reveal" id="works">
       <div class="container">
         <h2 class="section__title">Что я уже делаю</h2>
         <div class="cards-grid cards-grid--4">
@@ -236,7 +300,7 @@
       </div>
     </section>
 
-    <section class="section section--soft" id="video">
+    <section class="section section--soft reveal" id="video">
       <div class="container video-block">
         <h2 class="section__title">Видео для уроков</h2>
         <p class="video-block__text">Готовые ролики, которые можно использовать сразу</p>
@@ -244,89 +308,45 @@
       </div>
     </section>
 
-    <section class="section" id="reviews">
-      <div class="container">
-        <h2 class="section__title">Что изменилось у учителей</h2>
-        <div class="cards-grid cards-grid--reviews">
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Раньше на подготовку к урокам уходило 2–3 часа. Сейчас — примерно час, иногда меньше.</p>
-              <p>Самое главное — стало спокойнее.</p>
-              <p>Я не сижу вечерами за компьютером и не переделываю одно и то же.</p>
-            </div>
-            <footer class="card__author">Марина, учитель начальных классов (12 лет стажа)</footer>
-          </blockquote>
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Самое тяжёлое для меня было — тексты. Сообщения, отчёты, задания…</p>
-              <p>Пишешь, переписываешь, снова не нравится.</p>
-              <p>Сейчас делаю это в несколько раз быстрее.</p>
-              <p>И главное — больше нет этого ощущения &quot;я снова мучаюсь&quot;.</p>
-            </div>
-            <footer class="card__author">Ольга, классный руководитель (9 лет стажа)</footer>
-          </blockquote>
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Я думала, что это слишком сложно и не для меня.</p>
-              <p>Но всё объясняется спокойно и понятно. Без перегруза и без давления.</p>
-              <p>Сейчас уже делаю простые видео для занятий.</p>
-            </div>
-            <footer class="card__author">Ирина, педагог дополнительного образования (15 лет стажа)</footer>
-          </blockquote>
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Раньше презентация — это был отдельный вечер.</p>
-              <p>Сейчас есть структура и понимание, как её собирать.</p>
-              <p>Экономия времени очень ощутимая.</p>
-            </div>
-            <footer class="card__author">Елена, учитель русского языка (18 лет стажа)</footer>
-          </blockquote>
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Начал использовать онлайн-тесты с автоматической проверкой.</p>
-              <p>Раньше проверка занимала много времени, особенно при большой нагрузке.</p>
-              <p>Сейчас часть работы просто исчезла.</p>
-            </div>
-            <footer class="card__author">Андрей, учитель истории (7 лет стажа)</footer>
-          </blockquote>
-          <blockquote class="card card--review">
-            <div class="card__review-body">
-              <p>Очень удобно, что всё сразу применимо.</p>
-              <p>Не теория ради теории, а конкретные инструменты.</p>
-              <p>Начала использовать уже в первые дни.</p>
-            </div>
-            <footer class="card__author">Алина, учитель математики (3 года стажа)</footer>
-          </blockquote>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="about">
+    <section class="section reveal" id="about">
       <div class="container">
         <h2 class="section__title">Обо мне</h2>
-        <div class="about">
-          <p class="about__name">Мария Алдошина</p>
-          <p class="about__role">педагог и практик</p>
-          <p class="about__text">Я работаю в школе и понимаю, сколько времени забирают подготовка, отчёты, тексты и постоянные рабочие задачи.</p>
-          <p class="about__text">Поэтому я пришла к нейросетям не ради &quot;новых технологий&quot;, а ради практики:</p>
-          <p class="about__text">чтобы делать часть работы быстрее, проще и спокойнее.</p>
-          <p class="about__sub about__sub--strong">Сейчас я помогаю педагогам:</p>
-          <ul class="about__list">
-            <li>готовить материалы быстрее</li>
-            <li>делать презентации, тексты и тесты без перегруза</li>
-            <li>использовать нейросети понятным языком</li>
-            <li>внедрять только то, что действительно помогает в работе</li>
-          </ul>
-          <p class="about__text">Кроме обучения, я создаю сайты, тесты и простые цифровые решения для учителей.</p>
-          <p class="about__text about__text--closing">Мне важно, чтобы вам стало не &quot;интереснее&quot;, а легче работать каждый день.</p>
-          <p class="about__cta">
-            <a href="#contact" class="btn btn--primary">Написать</a>
-          </p>
+        <div class="about-layout">
+          <div class="about about--with-photo">
+            <p class="about__name">Мария Алдошина</p>
+            <p class="about__role">педагог и практик</p>
+            <p class="about__text">Я работаю в школе и понимаю, сколько времени забирают подготовка, отчёты, тексты и постоянные рабочие задачи.</p>
+            <p class="about__text">Поэтому я пришла к нейросетям не ради &quot;новых технологий&quot;, а ради практики:</p>
+            <p class="about__text">чтобы делать часть работы быстрее, проще и спокойнее.</p>
+            <p class="about__sub about__sub--strong">Сейчас я помогаю педагогам:</p>
+            <ul class="about__list">
+              <li>готовить материалы быстрее</li>
+              <li>делать презентации, тексты и тесты без перегруза</li>
+              <li>использовать нейросети понятным языком</li>
+              <li>внедрять только то, что действительно помогает в работе</li>
+            </ul>
+            <p class="about__text">Кроме обучения, я создаю сайты, тесты и простые цифровые решения для учителей.</p>
+            <p class="about__text about__text--closing">Мне важно, чтобы вам стало не &quot;интереснее&quot;, а легче работать каждый день.</p>
+            <p class="about__cta">
+              <a href="#contact" class="btn btn--primary">Написать</a>
+            </p>
+          </div>
+          <figure class="about__photo-wrap">
+            <img
+              class="about__photo"
+              src="images/about-classroom.png"
+              alt="Мария Алдошина в классе: доска с надписью «Нейросети», ноутбук и робот AI"
+              width="800"
+              height="1067"
+              loading="lazy"
+              decoding="async"
+            >
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section section--cta" id="cta-final">
+    <section class="section section--cta reveal" id="cta-final">
       <div class="container cta-final">
         <h2 class="section__title">Начните уже сегодня</h2>
         <p class="cta-final__text">Можно продолжать делать всё вручную<br>А можно упростить работу</p>
@@ -338,7 +358,194 @@
       </div>
     </section>
 
-    <section class="section section--contact" id="contact">
+    <section class="section reveal" id="reviews" aria-labelledby="reviews-heading">
+      <div class="container">
+        <div class="reviews-marquee-intro">
+          <p class="reviews-marquee-badge">Отзывы</p>
+          <h2 class="section__title" id="reviews-heading">Что изменилось у учителей</h2>
+          <p class="reviews-marquee-lead">
+            Реальные истории педагогов: меньше рутины, спокойнее вечера, больше времени на детей и урок.
+          </p>
+        </div>
+
+        <div class="reviews-marquee-viewport" aria-label="Лента отзывов">
+          <div class="reviews-marquee-columns">
+            <div class="reviews-marquee-column" style="--marquee-duration: 22s">
+              <div class="reviews-marquee-track">
+                <div class="reviews-marquee-chunk">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Марина</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов · 12 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Раньше на подготовку к урокам уходило 2–3 часа, сейчас — около часа. Стало спокойнее: не сижу вечерами и не переделываю одно и то же.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">О</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Ольга</p>
+                        <p class="reviews-marquee-card__role">Классный руководитель · 9 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Самое тяжёлое было с текстами: отчёты, задания, сообщения. Сейчас делаю это в несколько раз быстрее — без ощущения «я снова мучаюсь».
+                    </p>
+                  </article>
+                </div>
+                <div class="reviews-marquee-chunk" aria-hidden="true">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Марина</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов · 12 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Раньше на подготовку к урокам уходило 2–3 часа, сейчас — около часа. Стало спокойнее: не сижу вечерами и не переделываю одно и то же.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">О</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Ольга</p>
+                        <p class="reviews-marquee-card__role">Классный руководитель · 9 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Самое тяжёлое было с текстами: отчёты, задания, сообщения. Сейчас делаю это в несколько раз быстрее — без ощущения «я снова мучаюсь».
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews-marquee-column reviews-marquee-column--md" style="--marquee-duration: 28s">
+              <div class="reviews-marquee-track">
+                <div class="reviews-marquee-chunk">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">И</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Ирина</p>
+                        <p class="reviews-marquee-card__role">Педагог доп. образования · 15 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Думала, что нейросети — не для меня. Всё объясняют спокойно, без давления. Уже делаю простые видео для занятий.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка · 18 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Раньше презентация съедала целый вечер. Теперь есть структура и понимание, как её собирать — экономия времени очень ощутимая.
+                    </p>
+                  </article>
+                </div>
+                <div class="reviews-marquee-chunk" aria-hidden="true">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">И</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Ирина</p>
+                        <p class="reviews-marquee-card__role">Педагог доп. образования · 15 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Думала, что нейросети — не для меня. Всё объясняют спокойно, без давления. Уже делаю простые видео для занятий.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка · 18 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Раньше презентация съедала целый вечер. Теперь есть структура и понимание, как её собирать — экономия времени очень ощутимая.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+
+            <div class="reviews-marquee-column reviews-marquee-column--lg" style="--marquee-duration: 19s">
+              <div class="reviews-marquee-track">
+                <div class="reviews-marquee-chunk">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Андрей</p>
+                        <p class="reviews-marquee-card__role">Учитель истории · 7 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Онлайн-тесты с автоматической проверкой. Раньше проверка отнимала много времени при нагрузке — сейчас часть работы просто исчезла.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Алина</p>
+                        <p class="reviews-marquee-card__role">Учитель математики · 3 года стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Всё сразу применимо на уроке, не теория ради теории. Конкретные инструменты — начала использовать в первые дни.
+                    </p>
+                  </article>
+                </div>
+                <div class="reviews-marquee-chunk" aria-hidden="true">
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Андрей</p>
+                        <p class="reviews-marquee-card__role">Учитель истории · 7 лет стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Онлайн-тесты с автоматической проверкой. Раньше проверка отнимала много времени при нагрузке — сейчас часть работы просто исчезла.
+                    </p>
+                  </article>
+                  <article class="reviews-marquee-card">
+                    <div class="reviews-marquee-card__head">
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
+                      <div class="reviews-marquee-card__meta">
+                        <p class="reviews-marquee-card__name">Алина</p>
+                        <p class="reviews-marquee-card__role">Учитель математики · 3 года стажа</p>
+                      </div>
+                    </div>
+                    <p class="reviews-marquee-card__text">
+                      Всё сразу применимо на уроке, не теория ради теории. Конкретные инструменты — начала использовать в первые дни.
+                    </p>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact reveal" id="contact">
       <div class="container">
         <h2 class="section__title">Связаться</h2>
         <div class="social-links social-links--contact" role="navigation" aria-label="Каналы и группы">
@@ -366,12 +573,27 @@
     </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer reveal">
     <div class="container footer__inner">
-      <span class="logo logo--footer">Учитель&amp;Нейросети</span>
+      <span class="logo logo--footer">Учитель<span class="gradient-text">&amp;Нейросети</span></span>
       <p class="footer__copy">© 2026</p>
     </div>
   </footer>
+  <script src="theme-toggle.js" defer></script>
+  <script src="splash-cursor.js" defer></script>
+  <script src="blur-text.js" defer></script>
+  <script src="border-glow.js" defer></script>
+  <script src="motion.js" defer></script>
   <script src="ideas.js" defer></script>
+  <script src="reviews-marquee.js" defer></script>
+  <noscript>
+    <style>
+      .hero__note,
+      .hero__actions {
+        opacity: 1 !important;
+        transform: none !important;
+      }
+    </style>
+  </noscript>
 </body>
 </html>

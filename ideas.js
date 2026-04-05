@@ -110,6 +110,16 @@
       revealBtn.disabled = true;
       revealBtn.setAttribute('aria-disabled', 'true');
     }
+
+    if (!prefersReducedMotion && nextBtn) {
+      nextBtn.classList.add('idea-next--nudge');
+      const onNudgeEnd = (e) => {
+        if (e.animationName !== 'idea-next-nudge') return;
+        nextBtn.classList.remove('idea-next--nudge');
+        nextBtn.removeEventListener('animationend', onNudgeEnd);
+      };
+      nextBtn.addEventListener('animationend', onNudgeEnd);
+    }
   }
 
   function init() {
