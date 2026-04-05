@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Учитель&amp;Нейросети — материалы и курсы</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a href="#" class="logo">Учитель&amp;Нейросети</a>
+      <nav class="nav" aria-label="Основное меню">
+        <a href="#materials">Материалы</a>
+        <span class="nav__sep">|</span>
+        <a href="#courses">Курсы</a>
+        <span class="nav__sep">|</span>
+        <a href="#works">Работы</a>
+        <span class="nav__sep">|</span>
+        <a href="#reviews">Отзывы</a>
+        <span class="nav__sep">|</span>
+        <a href="#about">Обо мне</a>
+      </nav>
+      <a href="#contact" class="btn btn--header">👉 Написать мне</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__media">
+          <figure class="hero__figure">
+            <img
+              class="hero__img"
+              src="images/hero-photo.png"
+              alt="Мария Алдошина — педагог, использование ИИ и ChatGPT на уроке"
+              loading="eager"
+              decoding="async"
+            >
+          </figure>
+        </div>
+        <div class="hero__content">
+          <h1 class="hero__title">Тратите вечера на подготовку к урокам?</h1>
+          <p class="hero__lead">Покажу, как делать презентации, тесты, видео и отчёты в 2–3 раза быстрее</p>
+          <p class="hero__note">Даже если вы никогда не работали с нейросетями</p>
+          <div class="hero__actions">
+            <a href="#materials" class="btn btn--primary">Получить готовые материалы</a>
+            <a href="#courses" class="btn btn--outline">Начать обучение</a>
+            <a href="#contact" class="btn btn--ghost">Написать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="for-you">
+      <div class="container">
+        <h2 class="section__title">Вам точно подойдёт, если:</h2>
+        <ul class="cards-grid cards-grid--6">
+          <li class="card card--check">тратите много времени на подготовку</li>
+          <li class="card card--check">презентации делаются долго</li>
+          <li class="card card--check">тексты приходится переписывать</li>
+          <li class="card card--check">проверка занимает часы</li>
+          <li class="card card--check">пробовали нейросети, но не получилось</li>
+          <li class="card card--check">хотите упростить работу</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="materials">
+      <div class="container">
+        <h2 class="section__title">Заберите готовые материалы и используйте уже сегодня</h2>
+        <p class="section__subtitle">Скачайте и сократите подготовку к уроку уже сейчас</p>
+        <div class="cards-grid cards-grid--3">
+          <article class="card card--material">
+            <h3 class="card__title">Шаблоны презентаций</h3>
+            <p class="card__meta">3 готовых шаблона</p>
+            <p class="card__text">Открыл — вставил тему — используешь</p>
+            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+          </article>
+          <article class="card card--material">
+            <h3 class="card__title">Примеры мероприятий</h3>
+            <p class="card__meta">3 готовых сценария</p>
+            <p class="card__text">Не нужно придумывать с нуля</p>
+            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+          </article>
+          <article class="card card--material">
+            <h3 class="card__title">Конспекты + промпты</h3>
+            <p class="card__meta">3 конспекта + шаблоны</p>
+            <p class="card__text">Можно использовать или быстро сделать свой</p>
+            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <div id="modal-materials" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <a href="#" class="modal__backdrop" aria-hidden="true" tabindex="-1"></a>
+      <div class="modal__box">
+        <a href="#" class="modal__close" aria-label="Закрыть">&times;</a>
+        <h2 id="modal-title" class="modal__title">Получите доступ к материалам</h2>
+        <form class="modal__form" action="#" method="post">
+          <label class="field">
+            <span class="field__label">Имя</span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+          <label class="field">
+            <span class="field__label">Телефон</span>
+            <input type="tel" name="phone" autocomplete="tel">
+          </label>
+          <button type="submit" class="btn btn--primary btn--block">Получить доступ</button>
+        </form>
+        <p class="modal__hint">Подходит даже если вы не разбираетесь в нейросетях</p>
+      </div>
+    </div>
+
+    <section class="section section--accent" id="ideas">
+      <div class="container">
+        <h2 class="section__title section__title--light">Не знаете, как использовать нейросети на уроке?</h2>
+        <p class="ideas__cta-wrap">
+          <button type="button" class="btn btn--light" id="idea-reveal">Получить идею</button>
+        </p>
+
+        <div class="idea-slider" id="idea-slider">
+          <p class="idea-slider__loading" id="idea-loading" hidden>Загружаем идеи…</p>
+          <p class="idea-slider__error" id="idea-error" hidden>
+            Не удалось загрузить список идей. Откройте сайт через локальный сервер или хостинг (не как файл с диска) и обновите страницу.
+          </p>
+
+          <p class="idea-slider__hint" id="idea-hint">Нажмите «Получить идею» выше — появится случайная идея для урока.</p>
+
+          <article class="idea-card" id="idea-card" hidden>
+            <h3 class="idea-card__title" id="idea-title"></h3>
+            <p class="idea-card__meta" id="idea-meta"></p>
+            <p class="idea-card__section-label">Промпт для нейросети</p>
+            <p class="idea-card__block" id="idea-prompt"></p>
+            <p class="idea-card__section-label">На уроке</p>
+            <p class="idea-card__block idea-card__block--action" id="idea-action"></p>
+          </article>
+
+          <div class="idea-slider__nav" id="idea-nav" hidden>
+            <button type="button" class="btn btn--outline btn--on-accent" id="idea-next" disabled>Ещё идея</button>
+          </div>
+          <div class="idea-slider__actions">
+            <a href="#courses" class="btn btn--light">Хочу научиться</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="courses">
+      <div class="container">
+        <h2 class="section__title">Короткие курсы с результатом</h2>
+        <div class="cards-grid cards-grid--4">
+          <article class="card card--course">
+            <h3 class="card__title">Презентации за 10–15 минут</h3>
+            <p class="card__text">Даже если сейчас тратите 1–2 часа</p>
+            <p class="card__price">1290 ₽</p>
+            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+          </article>
+          <article class="card card--course">
+            <h3 class="card__title">Тексты и отчёты за 5–10 минут</h3>
+            <p class="card__text">Без переписывания</p>
+            <p class="card__price">1290 ₽</p>
+            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+          </article>
+          <article class="card card--course">
+            <h3 class="card__title">Видео для уроков</h3>
+            <p class="card__text">Даже если никогда не делали</p>
+            <p class="card__price">1290 ₽</p>
+            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+          </article>
+          <article class="card card--course">
+            <h3 class="card__title">Онлайн-тесты за 10 минут</h3>
+            <p class="card__text">С автоматической проверкой</p>
+            <p class="card__price">1290 ₽</p>
+            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--dark" id="main-course">
+      <div class="container">
+        <h2 class="section__title section__title--light">Полная система работы учителя</h2>
+        <div class="main-course">
+          <p class="main-course__lead">Вы научитесь:</p>
+          <ul class="main-course__list">
+            <li>делать материалы быстрее</li>
+            <li>не тратить вечера</li>
+            <li>использовать инструменты в работе</li>
+          </ul>
+          <p class="main-course__note">Уже на первом занятии сделаете свои материалы</p>
+          <p class="main-course__price">4990 ₽</p>
+          <div class="main-course__actions">
+            <a href="#contact" class="btn btn--primary">Записаться</a>
+            <a href="#contact" class="btn btn--outline btn--on-dark">Получить программу</a>
+            <a href="#contact" class="btn btn--ghost btn--on-dark">Написать</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="works">
+      <div class="container">
+        <h2 class="section__title">Что я уже делаю</h2>
+        <div class="cards-grid cards-grid--4">
+          <article class="card card--work">
+            <h3 class="card__title">Онлайн-тесты</h3>
+            <p class="card__text">Автоматическая проверка знаний</p>
+          </article>
+          <article class="card card--work">
+            <h3 class="card__title">Сайты для учителей</h3>
+            <p class="card__text">Современные и понятные</p>
+          </article>
+          <article class="card card--work">
+            <h3 class="card__title">Генераторы материалов</h3>
+            <p class="card__text">Ускоряют подготовку</p>
+          </article>
+          <article class="card card--work">
+            <h3 class="card__title">Калькуляторы и сервисы</h3>
+            <p class="card__text">Упрощают работу</p>
+          </article>
+        </div>
+        <div class="section__actions">
+          <a href="#works" class="btn btn--outline">Посмотреть</a>
+          <a href="#contact" class="btn btn--primary">Обсудить</a>
+          <a href="#contact" class="btn btn--ghost">Написать</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--soft" id="video">
+      <div class="container video-block">
+        <h2 class="section__title">Видео для уроков</h2>
+        <p class="video-block__text">Готовые ролики, которые можно использовать сразу</p>
+        <a href="#contact" class="btn btn--primary">Смотреть</a>
+      </div>
+    </section>
+
+    <section class="section" id="reviews">
+      <div class="container">
+        <h2 class="section__title">Что изменилось у учителей</h2>
+        <div class="cards-grid cards-grid--reviews">
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Раньше на подготовку к урокам уходило 2–3 часа. Сейчас — примерно час, иногда меньше.</p>
+              <p>Самое главное — стало спокойнее.</p>
+              <p>Я не сижу вечерами за компьютером и не переделываю одно и то же.</p>
+            </div>
+            <footer class="card__author">Марина, учитель начальных классов (12 лет стажа)</footer>
+          </blockquote>
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Самое тяжёлое для меня было — тексты. Сообщения, отчёты, задания…</p>
+              <p>Пишешь, переписываешь, снова не нравится.</p>
+              <p>Сейчас делаю это в несколько раз быстрее.</p>
+              <p>И главное — больше нет этого ощущения &quot;я снова мучаюсь&quot;.</p>
+            </div>
+            <footer class="card__author">Ольга, классный руководитель (9 лет стажа)</footer>
+          </blockquote>
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Я думала, что это слишком сложно и не для меня.</p>
+              <p>Но всё объясняется спокойно и понятно. Без перегруза и без давления.</p>
+              <p>Сейчас уже делаю простые видео для занятий.</p>
+            </div>
+            <footer class="card__author">Ирина, педагог дополнительного образования (15 лет стажа)</footer>
+          </blockquote>
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Раньше презентация — это был отдельный вечер.</p>
+              <p>Сейчас есть структура и понимание, как её собирать.</p>
+              <p>Экономия времени очень ощутимая.</p>
+            </div>
+            <footer class="card__author">Елена, учитель русского языка (18 лет стажа)</footer>
+          </blockquote>
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Начал использовать онлайн-тесты с автоматической проверкой.</p>
+              <p>Раньше проверка занимала много времени, особенно при большой нагрузке.</p>
+              <p>Сейчас часть работы просто исчезла.</p>
+            </div>
+            <footer class="card__author">Андрей, учитель истории (7 лет стажа)</footer>
+          </blockquote>
+          <blockquote class="card card--review">
+            <div class="card__review-body">
+              <p>Очень удобно, что всё сразу применимо.</p>
+              <p>Не теория ради теории, а конкретные инструменты.</p>
+              <p>Начала использовать уже в первые дни.</p>
+            </div>
+            <footer class="card__author">Алина, учитель математики (3 года стажа)</footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <h2 class="section__title">Обо мне</h2>
+        <div class="about">
+          <p class="about__name">Мария Алдошина</p>
+          <p class="about__role">педагог и практик</p>
+          <p class="about__text">Я работаю в школе и понимаю, сколько времени забирают подготовка, отчёты, тексты и постоянные рабочие задачи.</p>
+          <p class="about__text">Поэтому я пришла к нейросетям не ради &quot;новых технологий&quot;, а ради практики:</p>
+          <p class="about__text">чтобы делать часть работы быстрее, проще и спокойнее.</p>
+          <p class="about__sub about__sub--strong">Сейчас я помогаю педагогам:</p>
+          <ul class="about__list">
+            <li>готовить материалы быстрее</li>
+            <li>делать презентации, тексты и тесты без перегруза</li>
+            <li>использовать нейросети понятным языком</li>
+            <li>внедрять только то, что действительно помогает в работе</li>
+          </ul>
+          <p class="about__text">Кроме обучения, я создаю сайты, тесты и простые цифровые решения для учителей.</p>
+          <p class="about__text about__text--closing">Мне важно, чтобы вам стало не &quot;интереснее&quot;, а легче работать каждый день.</p>
+          <p class="about__cta">
+            <a href="#contact" class="btn btn--primary">Написать</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--cta" id="cta-final">
+      <div class="container cta-final">
+        <h2 class="section__title">Начните уже сегодня</h2>
+        <p class="cta-final__text">Можно продолжать делать всё вручную<br>А можно упростить работу</p>
+        <div class="cta-final__actions">
+          <a href="#materials" class="btn btn--primary">Получить материалы</a>
+          <a href="#courses" class="btn btn--outline btn--on-cta">Записаться</a>
+          <a href="#contact" class="btn btn--ghost btn--on-cta">Написать</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--contact" id="contact">
+      <div class="container">
+        <h2 class="section__title">Связаться</h2>
+        <div class="social-links social-links--contact" role="navigation" aria-label="Каналы и группы">
+          <a
+            class="btn btn--social btn--telegram"
+            href="https://t.me/marialdosina"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Telegram-канал</a>
+          <a
+            class="btn btn--social btn--max"
+            href="https://max.ru/join/i9ON0DBx0akIF69KxNyGi7EHhz1u1j7v57m54R4p2PU"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Группа в MAX</a>
+          <a
+            class="btn btn--social btn--vk"
+            href="https://vk.com/club231971768"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Группа ВКонтакте</a>
+        </div>
+        <p class="contact__text">Напишите удобным способом — отвечу и подскажу, с чего начать.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="logo logo--footer">Учитель&amp;Нейросети</span>
+      <p class="footer__copy">© 2026</p>
+    </div>
+  </footer>
+  <script src="ideas.js" defer></script>
+</body>
+</html>
