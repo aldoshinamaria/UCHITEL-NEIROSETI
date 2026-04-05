@@ -549,7 +549,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   font-size: clamp(1.08rem, 2.1vw, 1.28rem);
   color: var(--text-muted);
   font-weight: 500;
-  max-width: 42ch;
+  max-width: 46ch;
   animation: hero-rise 0.72s var(--ease-out-expo) 0.1s forwards;
   opacity: 0;
 }
@@ -569,10 +569,25 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .hero__actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.65rem;
   opacity: 0;
   transform: translateY(0.75rem);
+}
+
+.hero__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.hero__micro {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  max-width: 42ch;
 }
 
 .hero__actions.hero__rest--visible {
@@ -747,6 +762,15 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   margin-top: 2rem;
 }
 
+.path-choice__note {
+  margin: 1.25rem auto 0;
+  max-width: 28rem;
+  font-size: 0.88rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+  text-align: center;
+}
+
 /* Cards grid */
 .cards-grid {
   display: grid;
@@ -763,6 +787,21 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .cards-grid--6 {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+/* «Вам точно подойдёт»: на широкой сетке 4+2 — последние две карточки по центру */
+@media (min-width: 1024px) {
+  #for-you .cards-grid--for-you.cards-grid--6 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  #for-you .cards-grid--for-you.cards-grid--6 > li:nth-child(5) {
+    grid-column: 2;
+  }
+
+  #for-you .cards-grid--for-you.cards-grid--6 > li:nth-child(6) {
+    grid-column: 3;
+  }
 }
 
 .card {
@@ -829,6 +868,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .card--material .card__text {
   min-height: 2.8em;
+  margin-bottom: 0;
 }
 
 .card__price {
@@ -1119,16 +1159,19 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   text-align: center;
 }
 
-.main-course__lead {
-  margin: 0 0 0.5rem;
-  font-weight: 600;
-  opacity: 0.9;
+.main-course__intro {
+  margin: 0 auto 1.15rem;
+  max-width: 34rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.82);
+  text-align: center;
 }
 
 .main-course__list {
   text-align: left;
   display: inline-block;
-  margin: 0 0 1rem;
+  margin: 0 0 1.25rem;
   padding-left: 1.2rem;
   list-style: disc;
 }
@@ -1137,10 +1180,11 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   margin-bottom: 0.35rem;
 }
 
-.main-course__note {
-  margin: 0 0 1.5rem;
-  font-size: 1.05rem;
-  opacity: 0.92;
+.main-course__micro {
+  margin: 1rem 0 0;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.62);
 }
 
 .main-course__price {
@@ -1434,11 +1478,12 @@ html[data-theme="light"] .theme-toggle__icon--sun {
     gap: 0.5rem;
   }
 
-  .hero__actions {
+  .hero__buttons {
     flex-direction: column;
+    width: 100%;
   }
 
-  .hero__actions .btn {
+  .hero__buttons .btn {
     width: 100%;
   }
 }
@@ -1490,6 +1535,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
   .js-motion .reveal .video-block__text,
   .js-motion .reveal .video-block .btn,
   .js-motion .reveal .section__actions,
+  .js-motion .reveal .path-choice__note,
   .js-motion .reveal .social-links--contact,
   .js-motion .reveal .contact__text,
   .js-motion .reveal .footer__inner {
@@ -1632,6 +1678,7 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 .js-motion .reveal:not(.is-visible) .video-block__text,
 .js-motion .reveal:not(.is-visible) .video-block .btn,
 .js-motion .reveal:not(.is-visible) .section__actions,
+.js-motion .reveal:not(.is-visible) .path-choice__note,
 .js-motion .reveal:not(.is-visible) .social-links--contact,
 .js-motion .reveal:not(.is-visible) .contact__text,
 .js-motion .reveal:not(.is-visible) .footer__inner {
@@ -1669,6 +1716,10 @@ html[data-theme="light"] .theme-toggle__icon--sun {
 
 .js-motion .reveal.is-visible .section__actions {
   animation: reveal-rise 0.68s var(--ease-out-expo) 0.2s forwards;
+}
+
+.js-motion .reveal.is-visible .path-choice__note {
+  animation: reveal-rise 0.65s var(--ease-out-expo) 0.18s forwards;
 }
 
 .js-motion .reveal.is-visible .social-links--contact {
@@ -1751,9 +1802,9 @@ html[data-theme="light"] .section--dark .section__title--light::after {
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
 }
 
-html[data-theme="light"] .section--dark .main-course__lead,
+html[data-theme="light"] .section--dark .main-course__intro,
 html[data-theme="light"] .section--dark .main-course__list,
-html[data-theme="light"] .section--dark .main-course__note {
+html[data-theme="light"] .section--dark .main-course__micro {
   color: var(--text-soft);
 }
 

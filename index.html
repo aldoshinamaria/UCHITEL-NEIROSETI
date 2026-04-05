@@ -98,7 +98,7 @@
                 data-blur-delay="180"
                 data-blur-direction="top"
                 data-blur-by="words"
-              >Тратите вечера на подготовку к урокам?</h1>
+              >Сократите подготовку к урокам в 2–3 раза с помощью нейросетей</h1>
               <p
                 class="hero__lead"
                 data-blur-text
@@ -106,12 +106,14 @@
                 data-blur-start-delay="520"
                 data-blur-direction="top"
                 data-blur-by="words"
-              >Покажу, как делать презентации, тесты, видео и отчёты в 2–3 раза быстрее</p>
+              >Покажу, как делать презентации, тесты, тексты и отчёты быстрее — без сложных терминов и перегруза. Подходит для учителей российской школы.</p>
               <p class="hero__note">Даже если вы никогда не работали с нейросетями</p>
               <div class="hero__actions">
-                <a href="#materials" class="btn btn--primary">Получить готовые материалы</a>
-                <a href="#courses" class="btn btn--outline">Начать обучение</a>
-                <a href="#contact" class="btn btn--ghost">Написать</a>
+                <div class="hero__buttons">
+                  <a href="#materials" class="btn btn--primary">Получить готовые материалы</a>
+                  <a href="#courses" class="btn btn--outline">Посмотреть курсы</a>
+                </div>
+                <p class="hero__micro">Без регистрации. Можно посмотреть сразу</p>
               </div>
             </div>
           </div>
@@ -122,40 +124,38 @@
     <section class="section section--soft reveal" id="for-you">
       <div class="container">
         <h2 class="section__title">Вам точно подойдёт, если:</h2>
-        <ul class="cards-grid cards-grid--6">
-          <li class="card card--check">тратите много времени на подготовку</li>
-          <li class="card card--check">презентации делаются долго</li>
-          <li class="card card--check">тексты приходится переписывать</li>
-          <li class="card card--check">проверка занимает часы</li>
-          <li class="card card--check">пробовали нейросети, но не получилось</li>
-          <li class="card card--check">хотите упростить работу</li>
+        <p class="section__subtitle">Если хотя бы часть из этого вам знакома — вы по адресу</p>
+        <ul class="cards-grid cards-grid--6 cards-grid--for-you">
+          <li class="card card--check">на подготовку к урокам уходит слишком много времени</li>
+          <li class="card card--check">презентации, тексты и задания приходится долго дорабатывать вручную</li>
+          <li class="card card--check">проверка работ занимает часы и сильно выматывает</li>
+          <li class="card card--check">пробовали нейросети, но не получилось применить результат в работе</li>
+          <li class="card card--check">кажется, что нейросети — это сложно и не подходит для школы</li>
+          <li class="card card--check">хочется упростить работу, а не осваивать ещё один сложный инструмент</li>
         </ul>
       </div>
     </section>
 
     <section class="section reveal" id="materials">
       <div class="container">
-        <h2 class="section__title">Заберите готовые материалы и используйте уже сегодня</h2>
-        <p class="section__subtitle">Скачайте и сократите подготовку к уроку уже сейчас</p>
+        <h2 class="section__title">Как вам удобнее начать?</h2>
+        <p class="section__subtitle">Нужно быстро — берите готовое</p>
         <div class="cards-grid cards-grid--3">
           <article class="card card--material">
             <h3 class="card__title">Шаблоны презентаций</h3>
-            <p class="card__meta">3 готовых шаблона</p>
-            <p class="card__text">Открыл — вставил тему — используешь</p>
-            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+            <p class="card__text">готовые шаблоны — адаптируете под свой урок за 10–15 минут</p>
           </article>
           <article class="card card--material">
             <h3 class="card__title">Примеры мероприятий</h3>
-            <p class="card__meta">3 готовых сценария</p>
-            <p class="card__text">Не нужно придумывать с нуля</p>
-            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+            <p class="card__text">сценарии, которые можно провести без долгой подготовки</p>
           </article>
           <article class="card card--material">
             <h3 class="card__title">Конспекты + промпты</h3>
-            <p class="card__meta">3 конспекта + шаблоны</p>
-            <p class="card__text">Можно использовать или быстро сделать свой</p>
-            <a href="#modal-materials" class="btn btn--primary btn--block">Получить</a>
+            <p class="card__text">готовые конспекты и запросы для нейросетей под тему урока</p>
           </article>
+        </div>
+        <div class="section__actions">
+          <a href="#modal-materials" class="btn btn--primary">Скачать материалы</a>
         </div>
       </div>
     </section>
@@ -220,53 +220,47 @@
 
     <section class="section reveal" id="courses">
       <div class="container">
-        <h2 class="section__title">Короткие курсы с результатом</h2>
+        <p class="section__subtitle">Хотите научиться — выберите задачу</p>
         <div class="cards-grid cards-grid--4">
           <article class="card card--course">
-            <h3 class="card__title">Презентации за 10–15 минут</h3>
-            <p class="card__text">Даже если сейчас тратите 1–2 часа</p>
-            <p class="card__price">1290 ₽</p>
-            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+            <h3 class="card__title">Презентации</h3>
+            <p class="card__text">делать презентации за 10–15 минут вместо часа</p>
           </article>
           <article class="card card--course">
-            <h3 class="card__title">Тексты и отчёты за 5–10 минут</h3>
-            <p class="card__text">Без переписывания</p>
-            <p class="card__price">1290 ₽</p>
-            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+            <h3 class="card__title">Тексты и отчёты</h3>
+            <p class="card__text">создавать тексты и отчёты без переписывания</p>
           </article>
           <article class="card card--course">
-            <h3 class="card__title">Видео для уроков</h3>
-            <p class="card__text">Даже если никогда не делали</p>
-            <p class="card__price">1290 ₽</p>
-            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+            <h3 class="card__title">Видео</h3>
+            <p class="card__text">делать учебные видео без сложных программ</p>
           </article>
           <article class="card card--course">
-            <h3 class="card__title">Онлайн-тесты за 10 минут</h3>
-            <p class="card__text">С автоматической проверкой</p>
-            <p class="card__price">1290 ₽</p>
-            <a href="#contact" class="btn btn--primary btn--block">Записаться</a>
+            <h3 class="card__title">Онлайн-тесты</h3>
+            <p class="card__text">создавать тесты с автоматической проверкой</p>
           </article>
+        </div>
+        <p class="path-choice__note">подходит даже если вы начинаете с нуля</p>
+        <div class="section__actions">
+          <a href="#contact" class="btn btn--primary">Выбрать курс</a>
         </div>
       </div>
     </section>
 
     <section class="section section--dark reveal" id="main-course">
       <div class="container">
-        <h2 class="section__title section__title--light">Полная система работы учителя</h2>
+        <h2 class="section__title section__title--light">Нужна система — начните с этого</h2>
         <div class="main-course">
-          <p class="main-course__lead">Вы научитесь:</p>
+          <p class="main-course__intro">пошаговая система внедрения нейросетей в работу учителя — от подготовки уроков до проверки работ</p>
           <ul class="main-course__list">
-            <li>делать материалы быстрее</li>
-            <li>не тратить вечера</li>
-            <li>использовать инструменты в работе</li>
+            <li>подготовка к урокам в 2–3 раза быстрее</li>
+            <li>меньше ручной работы и рутины</li>
+            <li>уверенное использование нейросетей без перегруза</li>
           </ul>
-          <p class="main-course__note">Уже на первом занятии сделаете свои материалы</p>
           <p class="main-course__price">4990 ₽</p>
           <div class="main-course__actions">
-            <a href="#contact" class="btn btn--primary">Записаться</a>
-            <a href="#contact" class="btn btn--outline btn--on-dark">Получить программу</a>
-            <a href="#contact" class="btn btn--ghost btn--on-dark">Написать</a>
+            <a href="#contact" class="btn btn--primary">Посмотреть программу</a>
           </div>
+          <p class="main-course__micro">подходит даже если вы никогда не работали с нейросетями</p>
         </div>
       </div>
     </section>
@@ -315,18 +309,18 @@
           <div class="about about--with-photo">
             <p class="about__name">Мария Алдошина</p>
             <p class="about__role">педагог и практик</p>
-            <p class="about__text">Я работаю в школе и понимаю, сколько времени забирают подготовка, отчёты, тексты и постоянные рабочие задачи.</p>
-            <p class="about__text">Поэтому я пришла к нейросетям не ради &quot;новых технологий&quot;, а ради практики:</p>
-            <p class="about__text">чтобы делать часть работы быстрее, проще и спокойнее.</p>
-            <p class="about__sub about__sub--strong">Сейчас я помогаю педагогам:</p>
+            <p class="about__text">Работа в школе — это не только уроки. Это ещё подготовка, проверка, тексты, презентации, отчёты и постоянная нехватка времени.</p>
+            <p class="about__text">Я сама через это прохожу каждый день, поэтому хорошо понимаю, где именно возникает перегруз.</p>
+            <p class="about__text">В какой-то момент стало понятно, что так работать дальше просто тяжело. Хотелось найти инструмент, который реально помогает, а не усложняет работу ещё больше.</p>
+            <p class="about__text">Так в моей практике появились нейросети. Сначала было непросто — не всё получалось сразу, многое приходилось проверять и переделывать. Но постепенно стало ясно, как использовать их именно в работе учителя.</p>
+            <p class="about__text">Сейчас я применяю нейросети в своей работе и показываю другим учителям, как внедрить их спокойно и без перегруза — так, чтобы это действительно экономило время, а не добавляло новые сложности.</p>
+            <p class="about__sub about__sub--strong">Что для меня важно:</p>
             <ul class="about__list">
-              <li>готовить материалы быстрее</li>
-              <li>делать презентации, тексты и тесты без перегруза</li>
-              <li>использовать нейросети понятным языком</li>
-              <li>внедрять только то, что действительно помогает в работе</li>
+              <li>только то, что реально работает в школе</li>
+              <li>без сложных терминов и «технического языка»</li>
+              <li>чтобы можно было применить сразу на уроке</li>
             </ul>
-            <p class="about__text">Кроме обучения, я создаю сайты, тесты и простые цифровые решения для учителей.</p>
-            <p class="about__text about__text--closing">Мне важно, чтобы вам стало не &quot;интереснее&quot;, а легче работать каждый день.</p>
+            <p class="about__text about__text--closing">Я не учу «разбираться в нейросетях» — я показываю, как они могут упростить реальную работу учителя</p>
             <p class="about__cta">
               <a href="#contact" class="btn btn--primary">Написать</a>
             </p>
@@ -362,9 +356,9 @@
       <div class="container">
         <div class="reviews-marquee-intro">
           <p class="reviews-marquee-badge">Отзывы</p>
-          <h2 class="section__title" id="reviews-heading">Что изменилось у учителей</h2>
+          <h2 class="section__title" id="reviews-heading">Как это выглядит в реальной работе учителя</h2>
           <p class="reviews-marquee-lead">
-            Реальные истории педагогов: меньше рутины, спокойнее вечера, больше времени на детей и урок.
+            Без рекламного тона — коротко, как обычно пишут в переписке.
           </p>
         </div>
 
@@ -378,23 +372,23 @@
                       <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
                       <div class="reviews-marquee-card__meta">
                         <p class="reviews-marquee-card__name">Марина</p>
-                        <p class="reviews-marquee-card__role">Учитель начальных классов · 12 лет стажа</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Раньше на подготовку к урокам уходило 2–3 часа, сейчас — около часа. Стало спокойнее: не сижу вечерами и не переделываю одно и то же.
+                      раньше на презентацию уходила почти весь вечер. сейчас делаю за 10–15 минут и просто подстраиваю под урок. сначала не верила, что так можно
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">О</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Ольга</p>
-                        <p class="reviews-marquee-card__role">Классный руководитель · 9 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Самое тяжёлое было с текстами: отчёты, задания, сообщения. Сейчас делаю это в несколько раз быстрее — без ощущения «я снова мучаюсь».
+                      с текстами всегда было сложнее всего — переписывала по несколько раз. сейчас делаю через нейросети и уже редактирую под себя. стало намного спокойнее
                     </p>
                   </article>
                 </div>
@@ -404,23 +398,23 @@
                       <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
                       <div class="reviews-marquee-card__meta">
                         <p class="reviews-marquee-card__name">Марина</p>
-                        <p class="reviews-marquee-card__role">Учитель начальных классов · 12 лет стажа</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Раньше на подготовку к урокам уходило 2–3 часа, сейчас — около часа. Стало спокойнее: не сижу вечерами и не переделываю одно и то же.
+                      раньше на презентацию уходила почти весь вечер. сейчас делаю за 10–15 минут и просто подстраиваю под урок. сначала не верила, что так можно
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">О</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Ольга</p>
-                        <p class="reviews-marquee-card__role">Классный руководитель · 9 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Самое тяжёлое было с текстами: отчёты, задания, сообщения. Сейчас делаю это в несколько раз быстрее — без ощущения «я снова мучаюсь».
+                      с текстами всегда было сложнее всего — переписывала по несколько раз. сейчас делаю через нейросети и уже редактирую под себя. стало намного спокойнее
                     </p>
                   </article>
                 </div>
@@ -432,52 +426,52 @@
                 <div class="reviews-marquee-chunk">
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">И</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Ирина</p>
-                        <p class="reviews-marquee-card__role">Педагог доп. образования · 15 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Андрей</p>
+                        <p class="reviews-marquee-card__role">Учитель истории</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Думала, что нейросети — не для меня. Всё объясняют спокойно, без давления. Уже делаю простые видео для занятий.
+                      если честно, вообще не понимал, с чего начать. после курса сделал тест с автоматической проверкой и провёл в классе — ученикам даже понравилось
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Елена</p>
-                        <p class="reviews-marquee-card__role">Учитель русского языка · 18 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Алина</p>
+                        <p class="reviews-marquee-card__role">Классный руководитель</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Раньше презентация съедала целый вечер. Теперь есть структура и понимание, как её собирать — экономия времени очень ощутимая.
+                      думала, что это сложно и в школе не применимо. в итоге начала с простых вещей и уже использую на уроках. оказалось, всё намного проще, чем казалось
                     </p>
                   </article>
                 </div>
                 <div class="reviews-marquee-chunk" aria-hidden="true">
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">И</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Ирина</p>
-                        <p class="reviews-marquee-card__role">Педагог доп. образования · 15 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Андрей</p>
+                        <p class="reviews-marquee-card__role">Учитель истории</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Думала, что нейросети — не для меня. Всё объясняют спокойно, без давления. Уже делаю простые видео для занятий.
+                      если честно, вообще не понимал, с чего начать. после курса сделал тест с автоматической проверкой и провёл в классе — ученикам даже понравилось
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Елена</p>
-                        <p class="reviews-marquee-card__role">Учитель русского языка · 18 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Алина</p>
+                        <p class="reviews-marquee-card__role">Классный руководитель</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Раньше презентация съедала целый вечер. Теперь есть структура и понимание, как её собирать — экономия времени очень ощутимая.
+                      думала, что это сложно и в школе не применимо. в итоге начала с простых вещей и уже использую на уроках. оказалось, всё намного проще, чем казалось
                     </p>
                   </article>
                 </div>
@@ -489,52 +483,52 @@
                 <div class="reviews-marquee-chunk">
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Андрей</p>
-                        <p class="reviews-marquee-card__role">Учитель истории · 7 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Марина</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Онлайн-тесты с автоматической проверкой. Раньше проверка отнимала много времени при нагрузке — сейчас часть работы просто исчезла.
+                      раньше на презентацию уходила почти весь вечер. сейчас делаю за 10–15 минут и просто подстраиваю под урок. сначала не верила, что так можно
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Алина</p>
-                        <p class="reviews-marquee-card__role">Учитель математики · 3 года стажа</p>
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Всё сразу применимо на уроке, не теория ради теории. Конкретные инструменты — начала использовать в первые дни.
+                      с текстами всегда было сложнее всего — переписывала по несколько раз. сейчас делаю через нейросети и уже редактирую под себя. стало намного спокойнее
                     </p>
                   </article>
                 </div>
                 <div class="reviews-marquee-chunk" aria-hidden="true">
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Ан</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">М</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Андрей</p>
-                        <p class="reviews-marquee-card__role">Учитель истории · 7 лет стажа</p>
+                        <p class="reviews-marquee-card__name">Марина</p>
+                        <p class="reviews-marquee-card__role">Учитель начальных классов</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Онлайн-тесты с автоматической проверкой. Раньше проверка отнимала много времени при нагрузке — сейчас часть работы просто исчезла.
+                      раньше на презентацию уходила почти весь вечер. сейчас делаю за 10–15 минут и просто подстраиваю под урок. сначала не верила, что так можно
                     </p>
                   </article>
                   <article class="reviews-marquee-card">
                     <div class="reviews-marquee-card__head">
-                      <div class="reviews-marquee-avatar" aria-hidden="true">Ал</div>
+                      <div class="reviews-marquee-avatar" aria-hidden="true">Е</div>
                       <div class="reviews-marquee-card__meta">
-                        <p class="reviews-marquee-card__name">Алина</p>
-                        <p class="reviews-marquee-card__role">Учитель математики · 3 года стажа</p>
+                        <p class="reviews-marquee-card__name">Елена</p>
+                        <p class="reviews-marquee-card__role">Учитель русского языка</p>
                       </div>
                     </div>
                     <p class="reviews-marquee-card__text">
-                      Всё сразу применимо на уроке, не теория ради теории. Конкретные инструменты — начала использовать в первые дни.
+                      с текстами всегда было сложнее всего — переписывала по несколько раз. сейчас делаю через нейросети и уже редактирую под себя. стало намного спокойнее
                     </p>
                   </article>
                 </div>
