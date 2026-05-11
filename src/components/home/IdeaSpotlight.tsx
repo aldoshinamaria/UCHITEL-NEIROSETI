@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Shuffle } from "lucide-react";
 import { useCallback, useState } from "react";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { publicUrl } from "@/lib/publicUrl";
 
 type Idea = {
   title: string;
@@ -18,7 +19,7 @@ export function IdeaSpotlight() {
 
   const load = useCallback(async () => {
     try {
-      const res = await fetch("/idei.json");
+      const res = await fetch(publicUrl("idei.json"));
       if (!res.ok) throw new Error("fetch");
       const data = (await res.json()) as Idea[];
       setIdeas(data);

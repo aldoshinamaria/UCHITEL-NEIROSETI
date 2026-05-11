@@ -6,6 +6,7 @@ import {
   Wand2,
 } from "lucide-react";
 import { useEffect, useRef } from "react";
+import { publicUrl } from "@/lib/publicUrl";
 
 export function HeroVisual() {
   const rootRef = useRef<HTMLDivElement>(null);
@@ -87,7 +88,7 @@ export function HeroVisual() {
       >
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(139,138,255,0.18),transparent_55%)]" />
         <img
-          src="/images/hero-maria-ai.png"
+          src={publicUrl("images/hero-maria-ai.png")}
           alt=""
           className="relative z-[1] h-auto w-full object-cover opacity-90 mix-blend-screen contrast-110 saturate-[0.85]"
           decoding="async"

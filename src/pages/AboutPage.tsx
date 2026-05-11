@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { publicUrl } from "@/lib/publicUrl";
 
 const principles = [
   "только то, что работает в школе",
@@ -27,7 +28,7 @@ export function AboutPage() {
           >
             <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-bg-deep shadow-card">
               <img
-                src="/images/about-classroom.png"
+                src={publicUrl("images/about-classroom.png")}
                 alt="Мария Алдошина в классе"
                 className="h-auto w-full object-cover"
                 loading="lazy"

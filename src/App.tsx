@@ -1,5 +1,6 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/components/layout/AppLayout";
+import { routerBasename } from "@/lib/publicUrl";
 import { AboutPage } from "@/pages/AboutPage";
 import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
@@ -13,7 +14,7 @@ import { ToolsPage } from "@/pages/ToolsPage";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={routerBasename()}>
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<HomePage />} />
