@@ -1,5 +1,5 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
-import type { ReactNode } from "react";
+import type { PointerEvent, ReactNode, Ref } from "react";
 import { useMagnetic } from "@/hooks/useMagnetic";
 import { cn } from "@/lib/cn";
 
@@ -25,7 +25,7 @@ export function MagneticButton({
 
   const commonMotion = {
     style: { x: sx, y: sy },
-    onPointerMove: (e: React.PointerEvent<HTMLButtonElement | HTMLAnchorElement>) => {
+    onPointerMove: (e: PointerEvent<HTMLButtonElement | HTMLAnchorElement>) => {
       onPointerMove(e);
       const t = e.currentTarget;
       const r = t.getBoundingClientRect();
@@ -42,7 +42,7 @@ export function MagneticButton({
   };
 
   const styles = cn(
-    "relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-3 text-sm font-medium tracking-tight",
+    "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-3 text-sm font-medium tracking-tight",
     "bg-white/[0.06] text-fg ring-1 ring-white/10 transition-[box-shadow] duration-500",
     "hover:ring-accent/35 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
     className,
@@ -51,14 +51,14 @@ export function MagneticButton({
   if (href) {
     return (
       <motion.a
-        ref={ref as React.Ref<HTMLAnchorElement>}
+        ref={ref as Ref<HTMLAnchorElement>}
         href={href}
         className={styles}
         {...commonMotion}
       >
         <motion.span
           aria-hidden
-          className="pointer-events-none absolute inset-0 opacity-0 hover:opacity-100"
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{ backgroundImage: bg }}
         />
         <span className="relative z-[1]">{children}</span>
@@ -68,7 +68,7 @@ export function MagneticButton({
 
   return (
     <motion.button
-      ref={ref as React.Ref<HTMLButtonElement>}
+      ref={ref as Ref<HTMLButtonElement>}
       type={type}
       onClick={onClick}
       className={styles}
@@ -76,7 +76,7 @@ export function MagneticButton({
     >
       <motion.span
         aria-hidden
-        className="pointer-events-none absolute inset-0 opacity-0 hover:opacity-100"
+        className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
         style={{ backgroundImage: bg }}
       />
       <span className="relative z-[1]">{children}</span>
