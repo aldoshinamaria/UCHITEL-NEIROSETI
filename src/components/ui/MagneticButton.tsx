@@ -1,6 +1,7 @@
 import { motion, useMotionTemplate, useMotionValue } from "framer-motion";
 import type { PointerEvent, ReactNode, Ref } from "react";
 import { useMagnetic } from "@/hooks/useMagnetic";
+import { hashRouterHref } from "@/lib/hashRouterHref";
 import { cn } from "@/lib/cn";
 
 type MagneticButtonProps = {
@@ -52,7 +53,7 @@ export function MagneticButton({
     return (
       <motion.a
         ref={ref as Ref<HTMLAnchorElement>}
-        href={href}
+        href={hashRouterHref(href)}
         className={styles}
         {...commonMotion}
       >

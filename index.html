@@ -4,11 +4,37 @@
   <head>
     <script>
       (function () {
+        var loc = window.location;
+        var path = loc.pathname;
+
         try {
           var t = localStorage.getItem("uchitel-theme");
           document.documentElement.classList.remove("dark", "light");
           document.documentElement.classList.add(t === "light" ? "light" : "dark");
         } catch (e) {}
+
+        /* GitHub Pages: без завершающего / относительные ./assets/ часто уезжают в корень хоста — скрипт 404, белый экран. */
+        if (path !== "/" && path !== "" && !path.endsWith("/")) {
+          var last = path.split("/").pop() || "";
+          if (last.indexOf(".") === -1) {
+            loc.replace(path + "/" + loc.search + loc.hash);
+            return;
+          }
+        }
+
+        /* Явный <base>: бандл из ./assets/ резолвится от каталога Pages (напр. /repo/). */
+        var segments = path.split("/").filter(Boolean);
+        if (
+          segments.length &&
+          segments[segments.length - 1].indexOf(".") !== -1
+        ) {
+          segments.pop();
+        }
+        var basePath =
+          segments.length === 0 ? "/" : "/" + segments.join("/") + "/";
+        var baseEl = document.createElement("base");
+        baseEl.href = basePath;
+        document.head.insertBefore(baseEl, document.head.firstChild);
       })();
     </script>
     <meta charset="UTF-8" />
@@ -24,16 +50,6 @@
       rel="stylesheet"
     />
     <title>Учитель и нейросети — методические материалы и практика</title>
-    <script>
-      /* При base: './' бандл грузится относительно URL страницы — нужен завершающий / у «папки» GitHub Pages. */
-      (function () {
-        var path = location.pathname;
-        if (path === "/" || path.endsWith("/")) return;
-        var last = path.split("/").pop() || "";
-        if (last.indexOf(".") !== -1) return;
-        location.replace(path + "/" + location.search + location.hash);
-      })();
-    </script>
   </head>
   <body class="antialiased">
     <div id="root"></div>
