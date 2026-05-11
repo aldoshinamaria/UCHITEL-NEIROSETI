@@ -24,7 +24,7 @@ export function GlassCard({ children, className, glow, dense }: GlassCardProps) 
           className="pointer-events-none absolute -inset-px rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{
             background:
-              "radial-gradient(600px circle at var(--mx,50%) var(--my,20%), rgba(139,138,255,0.14), transparent 45%)",
+              "radial-gradient(600px circle at var(--mx,50%) var(--my,20%), rgba(168,85,247,0.14), transparent 45%)",
           }}
         />
       ) : null}

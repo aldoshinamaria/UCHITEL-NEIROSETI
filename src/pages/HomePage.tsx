@@ -45,7 +45,7 @@ export function HomePage() {
       <section className="relative overflow-hidden border-b border-white/[0.06]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-violet-600/15 blur-3xl" />
-          <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-teal-500/10 blur-3xl" />
+          <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-fuchsia-500/12 blur-3xl" />
         </div>
 
         <div className="relative mx-auto grid max-w-6xl gap-12 px-4 py-16 sm:px-6 sm:py-20 lg:grid-cols-2 lg:items-center lg:gap-16 lg:px-8 lg:py-24">
@@ -65,7 +65,7 @@ export function HomePage() {
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
             >
               Подготовка к уроку и внеурочке{" "}
-              <span className="bg-gradient-to-r from-accent-bright via-fg to-teal-300 bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-accent-bright via-fg to-accent-bright/90 bg-clip-text text-transparent">
                 с опорой на ИИ
               </span>
             </motion.h1>
@@ -237,7 +237,7 @@ export function HomePage() {
             </GlassCard>
             <div className="grid gap-4">
               <GlassCard dense glow className="flex items-start gap-3">
-                <Zap className="mt-0.5 size-5 text-teal-300" />
+                <Zap className="mt-0.5 size-5 text-accent-bright" />
                 <div>
                   <p className="text-sm font-medium text-fg">Регламентированная подготовка</p>
                   <p className="mt-3 text-sm leading-relaxed text-fg-muted">

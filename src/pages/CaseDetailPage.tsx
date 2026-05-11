@@ -107,7 +107,7 @@ export function CaseDetailPage() {
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <div>
             <p className="flex items-center gap-2 text-sm font-medium text-fg">
-              <CheckCircle2 className="size-4 text-teal-300" />
+              <CheckCircle2 className="size-4 text-accent-bright" />
               Адаптация описанной модели к условиям вашей школы
             </p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-fg-muted">

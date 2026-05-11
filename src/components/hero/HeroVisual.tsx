@@ -25,8 +25,8 @@ export function HeroVisual() {
       ref={rootRef}
       className="relative mx-auto aspect-[4/5] w-full max-w-lg overflow-visible sm:aspect-[5/6] lg:max-w-none"
     >
-      <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_var(--mx,50%)_var(--my,35%),rgba(139,138,255,0.22),transparent_55%)] opacity-90 blur-2xl transition-[opacity] duration-700" />
-      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-violet-500/15 via-transparent to-teal-500/10 opacity-80" />
+      <div className="pointer-events-none absolute inset-0 rounded-[2rem] bg-[radial-gradient(circle_at_var(--mx,50%)_var(--my,35%),rgba(168,85,247,0.22),transparent_55%)] opacity-90 blur-2xl transition-[opacity] duration-700" />
+      <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-violet-500/18 via-transparent to-fuchsia-600/12 opacity-80" />
 
       <motion.div
         className="relative z-10 mx-auto w-full max-w-lg overflow-hidden rounded-[1.85rem] border border-white/10 bg-bg-deep/40 shadow-card backdrop-blur-xl lg:max-w-none"
@@ -34,7 +34,7 @@ export function HeroVisual() {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
       >
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(139,138,255,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(168,85,247,0.18),transparent_55%)]" />
         <img
           src={publicUrl("images/hero-maria-ai.png")}
           alt=""

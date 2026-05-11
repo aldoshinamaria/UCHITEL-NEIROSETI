@@ -22,7 +22,7 @@ export function BlogPostPage() {
     <div className="relative">
       <div className="fixed left-0 right-0 top-[64px] z-40 h-[3px] bg-white/[0.04] sm:top-[72px]">
         <div
-          className="h-full bg-gradient-to-r from-accent via-teal-300 to-accent-bright"
+          className="h-full bg-gradient-to-r from-accent via-accent-bright to-fuchsia-300"
           style={{ width: `${progress}%` }}
         />
       </div>

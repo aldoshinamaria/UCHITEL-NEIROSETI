@@ -4,11 +4,11 @@
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Sora", var(--font-sans);
 
-  --color-bg-void: #030306;
-  --color-bg-deep: #06060a;
-  --color-bg: #0a0a0f;
-  --color-bg-elevated: #0f1016;
-  --color-bg-card: rgba(15, 16, 22, 0.55);
+  --color-bg-void: #000000;
+  --color-bg-deep: #050208;
+  --color-bg: #0a0610;
+  --color-bg-elevated: #100818;
+  --color-bg-card: rgba(16, 8, 24, 0.55);
 
   --color-border: rgba(255, 255, 255, 0.065);
   --color-border-strong: rgba(255, 255, 255, 0.12);
@@ -16,9 +16,9 @@
   --color-fg-muted: #a1a1aa;
   --color-fg-subtle: #71717a;
 
-  --color-accent: #8b8aff;
-  --color-accent-bright: #b4b3ff;
-  --color-teal: #5eead4;
+  --color-accent: #a855f7;
+  --color-accent-bright: #c084fc;
+  --color-teal: #c084fc;
   --color-rose: #fb7185;
 
   --radius-xs: 0.5rem;
@@ -32,9 +32,9 @@
     0 0 0 1px rgba(255, 255, 255, 0.06), 0 24px 80px -32px rgba(0, 0, 0, 0.85),
     inset 0 1px 0 rgba(255, 255, 255, 0.04);
   --shadow-card-hover:
-    0 0 0 1px rgba(139, 138, 255, 0.22), 0 32px 100px -28px rgba(88, 80, 200, 0.35),
-    0 0 80px -40px rgba(94, 234, 212, 0.2);
-  --shadow-glow: 0 0 120px -20px rgba(139, 138, 255, 0.45);
+    0 0 0 1px rgba(168, 85, 247, 0.22), 0 32px 100px -28px rgba(157, 80, 187, 0.38),
+    0 0 80px -40px rgba(192, 132, 252, 0.2);
+  --shadow-glow: 0 0 120px -20px rgba(168, 85, 247, 0.45);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 
@@ -75,13 +75,13 @@
   body {
     @apply bg-bg-void text-fg font-sans min-h-screen;
     background-image:
-      radial-gradient(ellipse 120% 80% at 50% -30%, rgba(139, 138, 255, 0.16), transparent),
-      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(94, 234, 212, 0.06), transparent);
+      radial-gradient(ellipse 120% 80% at 50% -30%, rgba(168, 85, 247, 0.14), transparent),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(157, 80, 187, 0.1), transparent);
     background-attachment: fixed;
   }
 
   ::selection {
-    background: rgba(139, 138, 255, 0.35);
+    background: rgba(168, 85, 247, 0.35);
     color: var(--color-fg);
   }
 }

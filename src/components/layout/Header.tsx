@@ -4,6 +4,7 @@ import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { cn } from "@/lib/cn";
+import { publicUrl } from "@/lib/publicUrl";
 
 const nav = [
   { to: "/", label: "Главная" },
@@ -29,7 +30,19 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-bg-void/75 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-        <NavLink to="/" className="group flex items-center gap-2">
+        <NavLink
+          to="/"
+          className="group flex items-center gap-3"
+          aria-label="Учитель и Нейросети — на главную"
+        >
+          <img
+            src={publicUrl("images/logo.png")}
+            alt=""
+            width={40}
+            height={40}
+            decoding="async"
+            className="size-9 shrink-0 rounded-full object-cover shadow-[0_0_24px_-4px_rgba(168,85,247,0.45)] ring-1 ring-white/10 transition-shadow duration-300 group-hover:shadow-[0_0_32px_-2px_rgba(192,132,252,0.5)] sm:size-10"
+          />
           <span className="font-display text-sm font-semibold tracking-tight text-fg sm:text-base">
             Учитель
             <span className="text-fg-muted transition-colors group-hover:text-accent">&amp;Нейросети</span>

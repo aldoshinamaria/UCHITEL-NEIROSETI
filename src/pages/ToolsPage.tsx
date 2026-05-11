@@ -72,7 +72,7 @@ export function ToolsPage() {
                     : "lg:col-span-4 min-h-[180px]"
               }
             >
-              <t.icon className="size-6 text-teal-200/90" aria-hidden />
+              <t.icon className="size-6 text-accent-bright/90" aria-hidden />
               <h3 className="mt-5 font-display text-lg font-semibold tracking-tight text-fg sm:text-xl">
                 {t.name}
               </h3>
