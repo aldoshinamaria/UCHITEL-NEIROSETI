@@ -1,6 +1,5 @@
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AppLayout } from "@/components/layout/AppLayout";
-import { routerBasename } from "@/lib/publicUrl";
 import { AboutPage } from "@/pages/AboutPage";
 import { BlogPage } from "@/pages/BlogPage";
 import { BlogPostPage } from "@/pages/BlogPostPage";
@@ -14,7 +13,7 @@ import { ToolsPage } from "@/pages/ToolsPage";
 
 export function App() {
   return (
-    <BrowserRouter basename={routerBasename()}>
+    <HashRouter>
       <Routes>
         <Route element={<AppLayout />}>
           <Route index element={<HomePage />} />
@@ -30,6 +29,6 @@ export function App() {
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

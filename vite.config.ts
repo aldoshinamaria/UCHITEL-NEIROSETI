@@ -6,12 +6,12 @@ import { defineConfig } from "vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-/** Репозиторий GitHub Pages: https://<user>.github.io/UCHITEL-NEIROSETI/ */
-const GH_PAGES_BASE = "/UCHITEL-NEIROSETI/";
-
 export default defineConfig(({ mode }) => ({
-  /** На GitHub Pages проект живёт в подкаталоге; локально оставляем "/" */
-  base: mode === "production" ? GH_PAGES_BASE : "/",
+  /**
+   * Production: относительные пути — скрипты грузятся от текущего URL (любая подпапка GitHub Pages).
+   * Dev: "/" — обычный локальный сервер.
+   */
+  base: mode === "production" ? "./" : "/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

@@ -14,6 +14,16 @@
       rel="stylesheet"
     />
     <title>Учитель & Нейросети — AI для педагогов</title>
+    <script>
+      /* При base: './' бандл грузится относительно URL страницы — нужен завершающий / у «папки» GitHub Pages. */
+      (function () {
+        var path = location.pathname;
+        if (path === "/" || path.endsWith("/")) return;
+        var last = path.split("/").pop() || "";
+        if (last.indexOf(".") !== -1) return;
+        location.replace(path + "/" + location.search + location.hash);
+      })();
+    </script>
   </head>
   <body class="antialiased">
     <div id="root"></div>
