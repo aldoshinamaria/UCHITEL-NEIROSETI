@@ -42,7 +42,7 @@ export function HomePage() {
 
   return (
     <div>
-      <section className="relative overflow-hidden border-b border-white/[0.06]">
+      <section className="relative overflow-hidden border-b border-border">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -left-24 top-20 h-72 w-72 rounded-full bg-violet-600/15 blur-3xl" />
           <div className="absolute -right-20 bottom-10 h-80 w-80 rounded-full bg-fuchsia-500/12 blur-3xl" />
@@ -101,7 +101,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/[0.06] py-20 sm:py-24">
+      <section className="border-b border-border py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Аудитория"
@@ -119,7 +119,7 @@ export function HomePage() {
             ].map((text, i) => (
               <GlassCard key={text} glow dense className="group">
                 <div className="flex gap-4">
-                  <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] font-mono text-xs text-accent-bright">
+                  <span className="mt-0.5 flex size-8 shrink-0 items-center justify-center rounded-lg bg-fg/[0.06] font-mono text-xs text-accent-bright">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <p className="text-[15px] leading-relaxed text-fg-muted">{text}</p>
@@ -130,7 +130,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/[0.06] py-20 sm:py-24">
+      <section className="border-b border-border py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Кейсы"
@@ -197,7 +197,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/[0.06] py-20 sm:py-24">
+      <section className="border-b border-border py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
@@ -214,7 +214,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="border-b border-white/[0.06] py-20 sm:py-24">
+      <section className="border-b border-border py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="grid gap-8 lg:grid-cols-3">
             <GlassCard glow className="lg:col-span-2">
@@ -279,7 +279,7 @@ export function HomePage() {
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {reviews.map((r) => (
               <GlassCard key={r.name} glow>
-                <Quote className="size-5 text-white/25" aria-hidden />
+                <Quote className="size-5 text-fg/20" aria-hidden />
                 <p className="mt-6 text-[15px] leading-relaxed text-fg-muted">«{r.text}»</p>
                 <div className="mt-8 text-sm">
                   <p className="font-medium text-fg">{r.name}</p>

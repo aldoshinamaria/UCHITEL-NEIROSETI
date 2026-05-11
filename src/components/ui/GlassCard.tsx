@@ -14,7 +14,7 @@ export function GlassCard({ children, className, glow, dense }: GlassCardProps) 
       className={cn(
         "group relative rounded-2xl border border-border bg-bg-card backdrop-blur-xl",
         "shadow-card transition-[box-shadow,transform,border-color] duration-500 ease-out",
-        "hover:-translate-y-0.5 hover:border-white/15 hover:shadow-card-hover",
+        "hover:-translate-y-0.5 hover:border-accent/25 hover:shadow-card-hover",
         dense ? "p-5 sm:p-6" : "p-6 sm:p-8",
         className,
       )}

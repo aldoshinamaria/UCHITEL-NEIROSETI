@@ -52,7 +52,7 @@ export function ContactPage() {
             </a>
           ))}
         </div>
-        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl border border-white/[0.08] bg-bg-elevated/70 p-8 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl border border-border bg-bg-elevated/70 p-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm leading-relaxed text-fg-muted">
             При обращении от образовательной организации или методического объединения целесообразно в первом сообщении
             указать регион, ступень обучения и кратко описать текущий уровень использования цифровых инструментов.

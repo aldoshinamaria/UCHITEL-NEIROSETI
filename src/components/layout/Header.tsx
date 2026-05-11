@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { MagneticButton } from "@/components/ui/MagneticButton";
+import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import { cn } from "@/lib/cn";
 import { publicUrl } from "@/lib/publicUrl";
 
@@ -28,7 +29,7 @@ export function Header() {
   const { pathname } = useLocation();
 
   return (
-    <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-bg-void/75 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 border-b border-border bg-bg-void/75 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
         <NavLink
           to="/"
@@ -41,7 +42,7 @@ export function Header() {
             width={40}
             height={40}
             decoding="async"
-            className="size-9 shrink-0 rounded-full object-cover shadow-[0_0_24px_-4px_rgba(168,85,247,0.45)] ring-1 ring-white/10 transition-shadow duration-300 group-hover:shadow-[0_0_32px_-2px_rgba(192,132,252,0.5)] sm:size-10"
+            className="size-9 shrink-0 rounded-full object-cover shadow-[0_0_24px_-4px_rgba(168,85,247,0.45)] ring-1 ring-fg/10 transition-shadow duration-300 group-hover:shadow-[0_0_32px_-2px_rgba(192,132,252,0.5)] sm:size-10"
           />
           <span className="font-display text-sm font-semibold tracking-tight text-fg sm:text-base">
             Учитель
@@ -62,19 +63,21 @@ export function Header() {
           ))}
         </nav>
 
-        <div className="hidden lg:block">
-          <MagneticButton href="/contact">Обратная связь</MagneticButton>
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <div className="hidden lg:block">
+            <MagneticButton href="/contact">Обратная связь</MagneticButton>
+          </div>
+          <button
+            type="button"
+            className="inline-flex size-11 items-center justify-center rounded-xl border border-border-strong bg-fg/[0.06] text-fg lg:hidden"
+            aria-label={open ? "Закрыть меню" : "Открыть меню"}
+            aria-expanded={open}
+            onClick={() => setOpen((v) => !v)}
+          >
+            {open ? <X className="size-5" /> : <Menu className="size-5" />}
+          </button>
         </div>
-
-        <button
-          type="button"
-          className="inline-flex size-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-fg lg:hidden"
-          aria-label={open ? "Закрыть меню" : "Открыть меню"}
-          aria-expanded={open}
-          onClick={() => setOpen((v) => !v)}
-        >
-          {open ? <X className="size-5" /> : <Menu className="size-5" />}
-        </button>
       </div>
 
       <AnimatePresence>
@@ -84,7 +87,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="border-t border-white/[0.06] bg-bg-deep/95 lg:hidden"
+            className="border-t border-border bg-bg-deep/95 lg:hidden"
           >
             <div className="flex flex-col gap-1 px-4 py-4 sm:px-6">
               {nav.map((item) => (
@@ -97,8 +100,8 @@ export function Header() {
                     cn(
                       "rounded-xl px-3 py-3 text-[15px] font-medium",
                       isActive || pathname.startsWith(`${item.to}/`)
-                        ? "bg-white/[0.06] text-fg"
-                        : "text-fg-muted hover:bg-white/[0.04] hover:text-fg",
+                        ? "bg-fg/[0.06] text-fg"
+                        : "text-fg-muted hover:bg-fg/[0.04] hover:text-fg",
                     )
                   }
                 >

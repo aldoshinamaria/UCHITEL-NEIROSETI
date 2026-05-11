@@ -35,7 +35,7 @@ export function BlogPage() {
           <aside className="lg:col-span-4 lg:sticky lg:top-28 lg:self-start">
             <GlassCard dense glow className="mb-6">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">Поиск</p>
-              <div className="mt-4 flex items-center gap-3 rounded-xl border border-white/10 bg-black/35 px-4 py-3">
+              <div className="mt-4 flex items-center gap-3 rounded-xl border border-border-strong bg-bg-card/90 px-4 py-3">
                 <Search className="size-4 text-fg-subtle" aria-hidden />
                 <input
                   value={q}
@@ -54,7 +54,7 @@ export function BlogPage() {
                   onClick={() => setCat("Все")}
                   className={cn(
                     "rounded-xl px-3 py-2 text-left text-sm transition-colors",
-                    cat === "Все" ? "bg-white/[0.08] text-fg" : "text-fg-muted hover:bg-white/[0.04] hover:text-fg",
+                    cat === "Все" ? "bg-fg/[0.08] text-fg" : "text-fg-muted hover:bg-fg/[0.04] hover:text-fg",
                   )}
                 >
                   Все
@@ -66,7 +66,7 @@ export function BlogPage() {
                     onClick={() => setCat(c)}
                     className={cn(
                       "rounded-xl px-3 py-2 text-left text-sm transition-colors",
-                      cat === c ? "bg-white/[0.08] text-fg" : "text-fg-muted hover:bg-white/[0.04] hover:text-fg",
+                      cat === c ? "bg-fg/[0.08] text-fg" : "text-fg-muted hover:bg-fg/[0.04] hover:text-fg",
                     )}
                   >
                     {c}

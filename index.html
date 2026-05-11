@@ -2,6 +2,15 @@
 <!-- ВАЖНО: для сайта нужен результат `npm run build` (папка dist/), не этот файл с /src/main.tsx -->
 <html lang="ru" class="dark">
   <head>
+    <script>
+      (function () {
+        try {
+          var t = localStorage.getItem("uchitel-theme");
+          document.documentElement.classList.remove("dark", "light");
+          document.documentElement.classList.add(t === "light" ? "light" : "dark");
+        } catch (e) {}
+      })();
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta

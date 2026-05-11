@@ -29,7 +29,7 @@ export function HeroVisual() {
       <div className="pointer-events-none absolute -inset-6 -z-10 rounded-[2.5rem] bg-gradient-to-br from-violet-500/18 via-transparent to-fuchsia-600/12 opacity-80" />
 
       <motion.div
-        className="relative z-10 mx-auto w-full max-w-lg overflow-hidden rounded-[1.85rem] border border-white/10 bg-bg-deep/40 shadow-card backdrop-blur-xl lg:max-w-none"
+        className="relative z-10 mx-auto w-full max-w-lg overflow-hidden rounded-[1.85rem] border border-border-strong bg-bg-deep/40 shadow-card backdrop-blur-xl lg:max-w-none"
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -38,23 +38,23 @@ export function HeroVisual() {
         <img
           src={publicUrl("images/hero-maria-ai.png")}
           alt=""
-          className="relative z-[1] h-auto w-full object-cover opacity-90 mix-blend-screen contrast-110 saturate-[0.85]"
+          className="relative z-[1] h-auto w-full object-cover opacity-90 contrast-110 saturate-[0.85] mix-blend-normal dark:mix-blend-screen"
           decoding="async"
           loading="eager"
         />
         <div className="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-t from-bg-void via-bg-void/25 to-transparent" />
-        <div className="absolute bottom-4 left-4 right-4 z-[3] flex items-center justify-between gap-3 rounded-2xl border border-white/10 bg-black/50 px-4 py-3 backdrop-blur-xl">
+        <div className="absolute bottom-4 left-4 right-4 z-[3] flex items-center justify-between gap-3 rounded-2xl border border-border-strong bg-bg-card/95 px-4 py-3 backdrop-blur-xl">
           <div className="flex items-center gap-3">
-            <div className="flex size-9 items-center justify-center rounded-xl bg-white/5 ring-1 ring-white/10">
+            <div className="flex size-9 items-center justify-center rounded-xl bg-fg/[0.06] ring-1 ring-border-strong">
               <Activity className="size-4 text-accent-bright" aria-hidden />
             </div>
             <div>
-              <p className="text-[11px] font-medium text-white/90">Организация подготовки</p>
-              <p className="text-[10px] text-white/50">ориентир: до −60 % неурочного времени</p>
+              <p className="text-[11px] font-medium text-fg">Организация подготовки</p>
+              <p className="text-[10px] text-fg-muted">ориентир: до −60 % неурочного времени</p>
             </div>
           </div>
-          <div className="hidden text-right text-[10px] text-white/45 sm:block">
-            <p className="font-mono text-white/70">этап</p>
+          <div className="hidden text-right text-[10px] text-fg-muted sm:block">
+            <p className="font-mono text-fg-subtle">этап</p>
             <p>методики</p>
           </div>
         </div>

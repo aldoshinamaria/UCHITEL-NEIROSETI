@@ -43,7 +43,7 @@ export function MagneticButton({
 
   const styles = cn(
     "group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl px-6 py-3 text-sm font-medium tracking-tight",
-    "bg-white/[0.06] text-fg ring-1 ring-white/10 transition-[box-shadow] duration-500",
+    "bg-fg/[0.06] text-fg ring-1 ring-fg/10 transition-[box-shadow] duration-500",
     "hover:ring-accent/35 hover:shadow-glow focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/60",
     className,
   );

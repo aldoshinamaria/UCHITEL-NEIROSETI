@@ -7,7 +7,7 @@ import { cn } from "@/lib/cn";
 
 export function CasesPage() {
   return (
-    <div className="border-b border-white/[0.06] py-16 sm:py-20">
+    <div className="border-b border-border py-16 sm:py-20">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Кейсы"

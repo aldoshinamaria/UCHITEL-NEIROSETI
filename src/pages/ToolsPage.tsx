@@ -80,7 +80,7 @@ export function ToolsPage() {
             </GlassCard>
           ))}
         </div>
-        <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-2xl border border-white/[0.08] bg-gradient-to-br from-white/[0.04] to-transparent p-8 sm:flex-row sm:items-center">
+        <div className="mt-14 flex flex-col items-start justify-between gap-6 rounded-2xl border border-border bg-gradient-to-br from-fg/[0.04] to-transparent p-8 sm:flex-row sm:items-center">
           <p className="max-w-2xl text-sm leading-relaxed text-fg-muted sm:text-[15px]">
             Сначала формулируется учебная или организационная задача, затем подбирается инструмент или сочетание
             средств. Такой порядок снижает риск длительного «тестирования моделей» без отнесения к программе и

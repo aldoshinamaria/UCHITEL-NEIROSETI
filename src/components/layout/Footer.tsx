@@ -3,7 +3,7 @@ import { publicUrl } from "@/lib/publicUrl";
 
 export function Footer() {
   return (
-    <footer className="border-t border-white/[0.06] bg-bg-deep/80 py-14">
+    <footer className="border-t border-border bg-bg-deep/80 py-14">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 sm:px-6 lg:flex-row lg:items-end lg:justify-between lg:px-8">
         <div className="flex gap-4">
           <img
@@ -12,7 +12,7 @@ export function Footer() {
             width={48}
             height={48}
             decoding="async"
-            className="size-12 shrink-0 rounded-full object-cover shadow-[0_0_28px_-6px_rgba(168,85,247,0.4)] ring-1 ring-white/10"
+            className="size-12 shrink-0 rounded-full object-cover shadow-[0_0_28px_-6px_rgba(168,85,247,0.4)] ring-1 ring-fg/10"
           />
           <div>
             <p className="font-display text-lg font-semibold tracking-tight text-fg">

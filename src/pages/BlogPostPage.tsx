@@ -20,14 +20,14 @@ export function BlogPostPage() {
 
   return (
     <div className="relative">
-      <div className="fixed left-0 right-0 top-[64px] z-40 h-[3px] bg-white/[0.04] sm:top-[72px]">
+      <div className="fixed left-0 right-0 top-[64px] z-40 h-[3px] bg-fg/10 sm:top-[72px]">
         <div
           className="h-full bg-gradient-to-r from-accent via-accent-bright to-fuchsia-300"
           style={{ width: `${progress}%` }}
         />
       </div>
 
-      <section className="relative overflow-hidden border-b border-white/[0.06] py-14 sm:py-20">
+      <section className="relative overflow-hidden border-b border-border py-14 sm:py-20">
         <div className={cn("pointer-events-none absolute inset-0 opacity-70", "bg-gradient-to-br", post.heroGradient)} />
         <div className="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Link
@@ -57,13 +57,13 @@ export function BlogPostPage() {
                 <a
                   key={t.id}
                   href={`#${t.id}`}
-                  className="block rounded-xl px-3 py-2 text-sm text-fg-muted transition-colors hover:bg-white/[0.04] hover:text-fg"
+                  className="block rounded-xl px-3 py-2 text-sm text-fg-muted transition-colors hover:bg-fg/[0.04] hover:text-fg"
                 >
                   {t.label}
                 </a>
               ))}
             </nav>
-            <div className="mt-8 border-t border-white/10 pt-6">
+            <div className="mt-8 border-t border-border-strong pt-6">
               <p className="text-sm text-fg-muted">Сотрудничество и вопросы по материалам</p>
               <MagneticButton href="/contact" className="mt-4 w-full">
                 Направить запрос

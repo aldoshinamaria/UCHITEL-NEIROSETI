@@ -13,7 +13,7 @@ export function CaseDetailPage() {
 
   return (
     <div>
-      <section className="relative overflow-hidden border-b border-white/[0.06] py-14 sm:py-20">
+      <section className="relative overflow-hidden border-b border-border py-14 sm:py-20">
         <div className="pointer-events-none absolute inset-0 opacity-70">
           <div className={cn("absolute inset-0 bg-gradient-to-br", c.coverGradient)} />
         </div>
@@ -49,7 +49,7 @@ export function CaseDetailPage() {
             {c.tagline}
           </motion.p>
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-fg-muted">
-            <span className="rounded-full border border-white/10 bg-black/30 px-4 py-2 backdrop-blur">
+            <span className="rounded-full border border-border-strong bg-bg-card/90 px-4 py-2 backdrop-blur">
               Целевая аудитория: {c.audience}
             </span>
           </div>
@@ -80,7 +80,7 @@ export function CaseDetailPage() {
               <ul className="mt-6 space-y-4">
                 {c.workflow.map((step, i) => (
                   <li key={step} className="flex gap-3">
-                    <span className="mt-1 flex size-7 shrink-0 items-center justify-center rounded-lg bg-white/[0.05] font-mono text-xs text-accent-bright">
+                    <span className="mt-1 flex size-7 shrink-0 items-center justify-center rounded-lg bg-fg/[0.06] font-mono text-xs text-accent-bright">
                       {i + 1}
                     </span>
                     <p className="text-sm leading-relaxed text-fg-muted">{step}</p>
@@ -91,7 +91,7 @@ export function CaseDetailPage() {
                 {c.results.map((r, i) => (
                   <div
                     key={`${r.label}-${i}`}
-                    className="flex items-center justify-between gap-4 rounded-xl border border-white/[0.08] bg-black/25 px-4 py-3"
+                    className="flex items-center justify-between gap-4 rounded-xl border border-border bg-bg-card/80 px-4 py-3"
                   >
                     <span className="text-sm text-fg-muted">{r.label}</span>
                     <span className="font-mono text-sm text-fg">{r.value}</span>
@@ -103,7 +103,7 @@ export function CaseDetailPage() {
         </div>
       </section>
 
-      <section className="border-t border-white/[0.06] py-16 sm:py-20">
+      <section className="border-t border-border py-16 sm:py-20">
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-8 px-4 sm:flex-row sm:items-center sm:px-6 lg:px-8">
           <div>
             <p className="flex items-center gap-2 text-sm font-medium text-fg">

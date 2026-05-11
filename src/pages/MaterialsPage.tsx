@@ -67,11 +67,11 @@ export function MaterialsPage() {
         <div className="fixed inset-0 z-[100] flex items-end justify-center sm:items-center" role="dialog" aria-modal="true">
           <button
             type="button"
-            className="absolute inset-0 bg-black/70 backdrop-blur-sm"
+            className="absolute inset-0 bg-black/40 backdrop-blur-sm dark:bg-black/70"
             aria-label="Закрыть"
             onClick={() => setOpen(false)}
           />
-          <div className="relative z-[1] m-4 w-full max-w-md rounded-2xl border border-white/10 bg-bg-elevated p-6 shadow-card sm:p-8">
+          <div className="relative z-[1] m-4 w-full max-w-md rounded-2xl border border-border-strong bg-bg-elevated p-6 shadow-card sm:p-8">
             <h4 className="font-display text-xl font-semibold text-fg">Запрос доступа к материалам</h4>
             <p className="mt-2 text-sm text-fg-muted">
               Демонстрационная форма: при необходимости подключите серверную обработку или сервис рассылки.
@@ -79,11 +79,11 @@ export function MaterialsPage() {
             <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
               <label className="block text-sm text-fg-muted">
                 Имя
-                <input className="mt-2 w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3 text-fg outline-none ring-0 focus:border-accent/40" />
+                <input className="mt-2 w-full rounded-xl border border-border-strong bg-bg-deep/80 px-4 py-3 text-fg outline-none ring-0 focus:border-accent/40 dark:bg-black/35" />
               </label>
               <label className="block text-sm text-fg-muted">
                 Email
-                <input type="email" className="mt-2 w-full rounded-xl border border-white/10 bg-black/35 px-4 py-3 text-fg outline-none focus:border-accent/40" />
+                <input type="email" className="mt-2 w-full rounded-xl border border-border-strong bg-bg-deep/80 px-4 py-3 text-fg outline-none focus:border-accent/40 dark:bg-black/35" />
               </label>
               <MagneticButton type="submit" className="w-full">
                 Отправить

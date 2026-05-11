@@ -13,7 +13,7 @@ export function NotFoundPage() {
         <MagneticButton href="/">На главную</MagneticButton>
         <Link
           to="/cases"
-          className="rounded-xl border border-white/10 bg-white/[0.03] px-6 py-3 text-sm font-medium text-fg-muted transition-colors hover:border-white/20 hover:text-fg"
+          className="rounded-xl border border-border-strong bg-fg/[0.04] px-6 py-3 text-sm font-medium text-fg-muted transition-colors hover:border-accent/30 hover:text-fg"
         >
           Кейсы
         </Link>

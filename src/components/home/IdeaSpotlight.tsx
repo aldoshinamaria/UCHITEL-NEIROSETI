@@ -38,7 +38,7 @@ export function IdeaSpotlight() {
   }, [ideas]);
 
   return (
-    <div className="rounded-2xl border border-white/[0.08] bg-bg-elevated/60 p-6 shadow-card backdrop-blur-xl sm:p-8">
+    <div className="rounded-2xl border border-border bg-bg-elevated/60 p-6 shadow-card backdrop-blur-xl sm:p-8">
       {!ideas ? (
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
@@ -75,13 +75,13 @@ export function IdeaSpotlight() {
             </MagneticButton>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
-            <div className="rounded-xl border border-white/[0.08] bg-black/30 p-5">
+            <div className="rounded-xl border border-border bg-bg-card/70 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-subtle">
                 Запрос к модели
               </p>
               <p className="mt-4 text-sm leading-relaxed text-fg-muted">{active?.prompt}</p>
             </div>
-            <div className="rounded-xl border border-white/[0.08] bg-black/30 p-5">
+            <div className="rounded-xl border border-border bg-bg-card/70 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-subtle">
                 На занятии
               </p>

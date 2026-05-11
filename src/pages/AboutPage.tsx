@@ -26,7 +26,7 @@ export function AboutPage() {
             transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-6"
           >
-            <div className="overflow-hidden rounded-[1.75rem] border border-white/10 bg-bg-deep shadow-card">
+            <div className="overflow-hidden rounded-[1.75rem] border border-border-strong bg-bg-deep shadow-card">
               <img
                 src={publicUrl("images/about-classroom.png")}
                 alt="Мария Алдошина в классе"
