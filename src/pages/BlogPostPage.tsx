@@ -15,7 +15,7 @@ export function BlogPostPage() {
 
   const toc = post.body.map((_, i) => ({
     id: `section-${i + 1}`,
-    label: `Пункт ${i + 1}`,
+    label: `Часть ${i + 1}`,
   }));
 
   return (
@@ -51,7 +51,7 @@ export function BlogPostPage() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8 lg:py-16">
         <aside className="lg:col-span-4 lg:sticky lg:top-32 lg:self-start">
           <GlassCard dense glow>
-            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">On this page</p>
+            <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">Содержание</p>
             <nav className="mt-4 space-y-2" aria-label="Содержание статьи">
               {toc.map((t) => (
                 <a
@@ -64,9 +64,9 @@ export function BlogPostPage() {
               ))}
             </nav>
             <div className="mt-8 border-t border-white/10 pt-6">
-              <p className="text-sm text-fg-muted">Нравится формат?</p>
+              <p className="text-sm text-fg-muted">Сотрудничество и вопросы по материалам</p>
               <MagneticButton href="/contact" className="mt-4 w-full">
-                Сотрудничество
+                Направить запрос
               </MagneticButton>
             </div>
           </GlassCard>

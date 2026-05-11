@@ -7,17 +7,17 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 const blocks = [
   {
     title: "Шаблоны презентаций",
-    text: "Структура слайдов и стиль — вы адаптируете под тему за 10–15 минут.",
+    text: "Логика слайдов и единообразное оформление; адаптация под тему урока за короткий интервал времени.",
     icon: FileText,
   },
   {
-    title: "Примеры мероприятий",
-    text: "Сценарии, которые можно провести без многочасовой подготовки.",
+    title: "Сценарии мероприятий",
+    text: "Структурированные планы воспитательных и внеурочных мероприятий без чрезмерных затрат времени на подготовку.",
     icon: PartyPopper,
   },
   {
-    title: "Конспекты и промпты",
-    text: "Опорный текст плюс готовые запросы под конкретные задачи урока.",
+    title: "Конспекты и запросы к модели",
+    text: "Опорный текст занятия и типовые формулировки запросов под конкретные диапазоны тем.",
     icon: Download,
   },
 ];
@@ -30,8 +30,8 @@ export function MaterialsPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Материалы"
-          title="Начать быстро — c готовой базой"
-          subtitle="Три формата, один принцип: применимо завтра, а не «когда разберусь»."
+          title="Стартовый набор для методической работы"
+          subtitle="Три формата; общий принцип — готовность к использованию на ближайших занятиях после первичного ознакомления."
         />
         <div className="mt-14 grid gap-6 lg:grid-cols-3">
           {blocks.map((b, i) => (
@@ -50,14 +50,14 @@ export function MaterialsPage() {
                 Доступ
               </p>
               <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-fg">
-                Получите набор материалов
+                Запросить комплект материалов
               </h3>
               <p className="mt-3 max-w-xl text-sm leading-relaxed text-fg-muted">
-                Оставьте контакт — вышлю ссылку или подскажу, что выбрать первым.
+                Укажите контактные данные — будет направлена ссылка на подборку либо рекомендация по приоритету внедрения.
               </p>
             </div>
             <MagneticButton type="button" onClick={() => setOpen(true)} className="shrink-0 px-8">
-              Запросить доступ
+              Оформить запрос
             </MagneticButton>
           </GlassCard>
         </div>
@@ -72,9 +72,9 @@ export function MaterialsPage() {
             onClick={() => setOpen(false)}
           />
           <div className="relative z-[1] m-4 w-full max-w-md rounded-2xl border border-white/10 bg-bg-elevated p-6 shadow-card sm:p-8">
-            <h4 className="font-display text-xl font-semibold text-fg">Контактная форма</h4>
+            <h4 className="font-display text-xl font-semibold text-fg">Запрос доступа к материалам</h4>
             <p className="mt-2 text-sm text-fg-muted">
-              Демо-форма: подключите backend или сервис рассылки при необходимости.
+              Демонстрационная форма: при необходимости подключите серверную обработку или сервис рассылки.
             </p>
             <form className="mt-6 space-y-4" onSubmit={(e) => e.preventDefault()}>
               <label className="block text-sm text-fg-muted">

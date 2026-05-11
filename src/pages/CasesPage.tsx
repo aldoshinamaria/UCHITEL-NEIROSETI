@@ -11,8 +11,8 @@ export function CasesPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Кейсы"
-          title="Мини‑продуктовые витрины"
-          subtitle="Каждый блок — задача, решение, цепочка и результат. Без «просто красивых картинок»."
+          title="Методические описания внедрения"
+          subtitle="В каждом блоке — исходная ситуация, выбранный подход и ожидаемый эффект; иллюстрации не заменяют текст."
         />
         <div className="mt-16 grid auto-rows-[minmax(200px,auto)] gap-5 lg:grid-cols-12">
           {cases.map((c) => {
@@ -47,7 +47,7 @@ export function CasesPage() {
                       </p>
                     </div>
                     <span className="inline-flex items-center gap-2 text-sm font-medium text-accent-bright">
-                      Открыть кейс
+                      Подробнее
                       <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </div>

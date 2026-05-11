@@ -7,19 +7,19 @@ const channels = [
   {
     label: "Telegram-канал",
     href: "https://t.me/marialdosina",
-    hint: "Заметки, разборы, короткие практики.",
+    hint: "Анонсы материалов, разборы отдельных задач, краткие методические рекомендации.",
     tone: "from-sky-500/15 to-transparent",
   },
   {
     label: "Группа в MAX",
     href: "https://max.ru/join/i9ON0DBx0akIF69KxNyGi7EHhz1u1j7v57m54R4p2PU",
-    hint: "Живые обсуждения и быстрые ответы.",
+    hint: "Обсуждение с коллегами, оперативные уточнения по материалам.",
     tone: "from-violet-500/15 to-transparent",
   },
   {
     label: "ВКонтакте",
     href: "https://vk.com/club231971768",
-    hint: "Длинные материалы и подборки.",
+    hint: "Подборки статей и методических заметок для отложенного чтения.",
     tone: "from-emerald-500/12 to-transparent",
   },
 ];
@@ -30,8 +30,8 @@ export function ContactPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Контакты"
-          title="Свяжитесь удобным каналом"
-          subtitle="Отвечу сама, без «отдела забот». Напишите, чем вы занимаетесь и что хотите упростить."
+          title="Связь по выбранному каналу"
+          subtitle="Просьба указать должность, предмет или направление работы и суть запроса — так ответ получится предметным и полезным."
         />
         <div className="mt-14 grid gap-5 lg:grid-cols-3">
           {channels.map((c) => (
@@ -54,8 +54,8 @@ export function ContactPage() {
         </div>
         <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl border border-white/[0.08] bg-bg-elevated/70 p-8 sm:flex-row sm:items-center sm:justify-between">
           <p className="max-w-xl text-sm leading-relaxed text-fg-muted">
-            Если вы представляете школу или методическое объединение — оставьте контекст в первом сообщении: регион,
-            возраст, текущая цифровая зрелость.
+            При обращении от образовательной организации или методического объединения целесообразно в первом сообщении
+            указать регион, ступень обучения и кратко описать текущий уровень использования цифровых инструментов.
           </p>
           <MagneticButton href="https://t.me/marialdosina" className="px-8">
             Написать в Telegram

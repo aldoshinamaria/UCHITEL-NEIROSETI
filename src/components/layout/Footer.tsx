@@ -9,7 +9,8 @@ export function Footer() {
             Учитель<span className="text-fg-muted">&amp;Нейросети</span>
           </p>
           <p className="mt-3 max-w-sm text-sm leading-relaxed text-fg-muted">
-            Практика и продуктовый подход к AI в школе: спокойно, применимо, без перегруза.
+            Методическая поддержка педагога при внедрении инструментов на базе ИИ: сдержанно, с опорой на программу и
+            практику класса.
           </p>
         </div>
         <div className="flex flex-wrap gap-x-8 gap-y-4 text-sm text-fg-muted">

@@ -7,7 +7,7 @@ export function NotFoundPage() {
       <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-fg-subtle">404</p>
       <h1 className="font-display text-4xl font-semibold tracking-tight text-fg">Страница не найдена</h1>
       <p className="text-fg-muted">
-        Маршрут мог переехать вместе с обновлением структуры. Вернитесь на главную или в кейсы.
+        Запрашиваемая страница отсутствует или перенесена. Воспользуйтесь главной страницей или разделом с кейсами.
       </p>
       <div className="flex flex-wrap gap-3">
         <MagneticButton href="/">На главную</MagneticButton>

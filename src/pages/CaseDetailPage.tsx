@@ -50,7 +50,7 @@ export function CaseDetailPage() {
           </motion.p>
           <div className="mt-10 flex flex-wrap gap-3 text-sm text-fg-muted">
             <span className="rounded-full border border-white/10 bg-black/30 px-4 py-2 backdrop-blur">
-              Аудитория: {c.audience}
+              Целевая аудитория: {c.audience}
             </span>
           </div>
         </div>
@@ -75,7 +75,7 @@ export function CaseDetailPage() {
           <div className="lg:col-span-5">
             <GlassCard glow className="h-full">
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">
-                AI workflow
+                Этапы работы с ИИ
               </p>
               <ul className="mt-6 space-y-4">
                 {c.workflow.map((step, i) => (
@@ -108,14 +108,14 @@ export function CaseDetailPage() {
           <div>
             <p className="flex items-center gap-2 text-sm font-medium text-fg">
               <CheckCircle2 className="size-4 text-teal-300" />
-              Готовы повторить систему у себя
+              Адаптация описанной модели к условиям вашей школы
             </p>
             <p className="mt-3 max-w-xl text-sm leading-relaxed text-fg-muted">
-              Короткий созвон или сообщение — подскажу, с какого шаблона начать.
+              По запросу — краткая консультация и ориентир по шаблону, с которого целесообразно начать.
             </p>
           </div>
           <MagneticButton href="/contact" className="px-8">
-            Обсудить внедрение
+            Запросить консультацию
           </MagneticButton>
         </div>
       </section>

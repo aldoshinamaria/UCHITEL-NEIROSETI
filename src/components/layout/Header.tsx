@@ -9,7 +9,7 @@ const nav = [
   { to: "/", label: "Главная" },
   { to: "/cases", label: "Кейсы" },
   { to: "/materials", label: "Материалы" },
-  { to: "/tools", label: "AI-инструменты" },
+  { to: "/tools", label: "Инструменты ИИ" },
   { to: "/about", label: "О проекте" },
   { to: "/blog", label: "Блог" },
   { to: "/contact", label: "Контакты" },
@@ -50,7 +50,7 @@ export function Header() {
         </nav>
 
         <div className="hidden lg:block">
-          <MagneticButton href="/contact">Связаться</MagneticButton>
+          <MagneticButton href="/contact">Обратная связь</MagneticButton>
         </div>
 
         <button
@@ -94,7 +94,7 @@ export function Header() {
               ))}
               <div className="pt-2">
                 <MagneticButton href="/contact" className="w-full">
-                  Связаться
+                  Обратная связь
                 </MagneticButton>
               </div>
             </div>

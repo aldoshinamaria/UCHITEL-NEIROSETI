@@ -26,7 +26,9 @@ export function IdeaSpotlight() {
       setActive(data[Math.floor(Math.random() * data.length)] ?? null);
       setError(null);
     } catch {
-      setError("Откройте сайт через dev-сервер или хостинг — локальный файл не даст загрузить JSON.");
+      setError(
+        "Для загрузки списка идей откройте сайт через локальный сервер разработки или опубликованную версию (при открытии файла с диска запрос к JSON может быть заблокирован).",
+      );
     }
   }, []);
 
@@ -41,12 +43,12 @@ export function IdeaSpotlight() {
         <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-sm text-fg-muted">
-              Случайная идея + промпт + действие на уроке — из реального банка сценариев.
+              Случайный сценарий из банка: формулировка запроса к модели и вариант применения на уроке.
             </p>
             {error ? <p className="mt-3 text-sm text-rose-300/90">{error}</p> : null}
           </div>
           <MagneticButton type="button" onClick={load}>
-            Загрузить идеи
+            Загрузить сценарии
           </MagneticButton>
         </div>
       ) : (
@@ -58,7 +60,7 @@ export function IdeaSpotlight() {
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">
-                Случайная идея
+                Случайный сценарий
               </p>
               <h4 className="mt-3 font-display text-xl font-semibold tracking-tight text-fg sm:text-2xl">
                 {active?.title}
@@ -69,19 +71,19 @@ export function IdeaSpotlight() {
             </div>
             <MagneticButton type="button" onClick={next}>
               <Shuffle className="size-4" aria-hidden />
-              Ещё
+              Другой вариант
             </MagneticButton>
           </div>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <div className="rounded-xl border border-white/[0.08] bg-black/30 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-subtle">
-                Промпт
+                Запрос к модели
               </p>
               <p className="mt-4 text-sm leading-relaxed text-fg-muted">{active?.prompt}</p>
             </div>
             <div className="rounded-xl border border-white/[0.08] bg-black/30 p-5">
               <p className="text-[11px] font-semibold uppercase tracking-widest text-fg-subtle">
-                На уроке
+                На занятии
               </p>
               <p className="mt-4 text-sm leading-relaxed text-fg-muted">{active?.action}</p>
             </div>

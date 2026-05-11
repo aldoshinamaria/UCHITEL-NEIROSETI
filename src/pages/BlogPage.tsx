@@ -27,8 +27,8 @@ export function BlogPage() {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Блог"
-          title="Editorial AI magazine"
-          subtitle="Короткие тексты, сильная структура, уважение к времени учителя."
+          title="Методические статьи и материалы"
+          subtitle="Сжатый формат, чёткая структура, уважение к ограниченному времени педагога."
         />
 
         <div className="mt-12 grid gap-10 lg:grid-cols-12">
@@ -90,7 +90,7 @@ export function BlogPage() {
                   <div className="relative flex h-full flex-col justify-between gap-8">
                     <div>
                       <p className="text-[11px] font-semibold uppercase tracking-[0.32em] text-fg-subtle">
-                        Featured · {featured.category}
+                        Главный материал · {featured.category}
                       </p>
                       <h2 className="mt-4 max-w-3xl font-display text-3xl font-semibold tracking-tight text-fg sm:text-4xl">
                         {featured.title}
@@ -99,8 +99,8 @@ export function BlogPage() {
                     </div>
                     <div className="flex flex-wrap items-center gap-4 text-sm text-fg-subtle">
                       <span>{featured.date}</span>
-                      <span className="font-mono text-xs text-fg-muted">{featured.readMin} мин</span>
-                      <span className="text-fg group-hover:text-accent-bright">Читать материал →</span>
+                      <span className="font-mono text-xs text-fg-muted">{featured.readMin} мин.</span>
+                      <span className="text-fg group-hover:text-accent-bright">Перейти к тексту →</span>
                     </div>
                   </div>
                 </GlassCard>
@@ -126,7 +126,7 @@ export function BlogPage() {
                       <p className="mt-3 text-sm leading-relaxed text-fg-muted">{p.excerpt}</p>
                       <div className="mt-6 flex items-center justify-between text-xs text-fg-subtle">
                         <span>{p.date}</span>
-                        <span className="font-mono text-[11px]">{p.readMin} мин</span>
+                        <span className="font-mono text-[11px]">{p.readMin} мин.</span>
                       </div>
                     </div>
                   </GlassCard>

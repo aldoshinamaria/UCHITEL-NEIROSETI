@@ -14,18 +14,18 @@ import { cn } from "@/lib/cn";
 const reviews = [
   {
     name: "Марина",
-    role: "Начальные классы",
-    text: "Презентации стали 10–15 минут вместо вечера — сначала не верила.",
+    role: "Учитель начальных классов",
+    text: "Подготовка наглядного сопровождения к уроку сократилась до 10–15 минут вместо нескольких часов; формат оказался устойчивым и переносимым.",
   },
   {
     name: "Андрей",
-    role: "История",
-    text: "Собрал тест с автопроверкой и спокойно провёл в классе — без лишней суеты.",
+    role: "Учитель истории",
+    text: "Самостоятельно подготовил проверочный материал с элементами автоматизации и провёл занятие без срыва хронометража.",
   },
   {
     name: "Алина",
     role: "Классный руководитель",
-    text: "Начала с простого — теперь использую каждую неделю, стало легче дышать.",
+    text: "Начали с простых шаблонов; инструменты постепенно вошли в регулярную методическую практику.",
   },
 ];
 
@@ -56,7 +56,7 @@ export function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
             >
-              AI education platform
+              Методическая линия
             </motion.p>
             <motion.h1
               className="font-display text-balance text-[clamp(2.4rem,6vw,4.25rem)] font-semibold leading-[0.95] tracking-tight text-fg"
@@ -64,9 +64,9 @@ export function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.75, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
             >
-              Будущее подготовки{" "}
+              Подготовка к уроку и внеурочке{" "}
               <span className="bg-gradient-to-r from-accent-bright via-fg to-teal-300 bg-clip-text text-transparent">
-                уже в классе
+                с опорой на ИИ
               </span>
             </motion.h1>
             <motion.p
@@ -75,7 +75,7 @@ export function HomePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.12 }}
             >
-              Меньше шума. Больше ясности. Практика для педагогов без «техно-кастрата».
+              Сдержанный, применимый в школе подход: разумная экономия времени при сохранении методической ответственности педагога.
             </motion.p>
             <motion.div
               className="mt-10"
@@ -84,10 +84,13 @@ export function HomePage() {
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             >
               <MagneticButton href="/materials" className="px-8 py-3.5 text-[15px]">
-                Получить материалы
+                Перейти к материалам
               </MagneticButton>
               <p className="mt-4 text-sm text-fg-subtle">
-                Дальше — <Link className="text-fg-muted underline-offset-4 hover:text-fg hover:underline" to="/cases">кейсы и витрины</Link>
+                Примеры внедрения — в разделе{" "}
+                <Link className="text-fg-muted underline-offset-4 hover:text-fg hover:underline" to="/cases">
+                  «Кейсы»
+                </Link>
               </p>
             </motion.div>
           </div>
@@ -101,18 +104,18 @@ export function HomePage() {
       <section className="border-b border-white/[0.06] py-20 sm:py-24">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
-            eyebrow="Сигнал"
-            title="Вам откликнется, если вы устали готовиться «как всегда»"
-            subtitle="Короткий чеклист — без давления и базара про технологии."
+            eyebrow="Аудитория"
+            title="Материалы и подход ориентированы на практику современной школы"
+            subtitle="Ниже — типовые ситуации, с которыми педагоги обращаются к проекту."
           />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {[
-              "Подготовка съедает вечер, а не урок",
-              "Тексты и презентации приходится долго полировать",
-              "Проверки и отчёты ощущаются бесконечными",
-              "Нейросети пробовали — но не встроили в процесс",
-              "Хочется проще, а не «ещё один сложный инструмент»",
-              "Нужна ясная система для коллег и для себя",
+              "Методическая подготовка занимает значительную долю неурочного времени",
+              "Тексты и презентации требуют многоступенчатой редакции",
+              "Проверочные работы, отчёты и сопроводительная документация отнимают много часов",
+              "Инструменты на базе ИИ применялись точечно, без устойчивого регламента",
+              "Требуется понятная схема работы, а не очередной перегруженный сервис",
+              "Необходима модель, которую можно согласовать в методическом объединении или использовать самостоятельно",
             ].map((text, i) => (
               <GlassCard key={text} glow dense className="group">
                 <div className="flex gap-4">
@@ -131,8 +134,8 @@ export function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             eyebrow="Кейсы"
-            title="Мини-витрины результата — как продукт, не как портфолио"
-            subtitle="Каждый кейс — это задача, цепочка и измеримый эффект."
+            title="Примеры внедрения: задача, решение, ожидаемый эффект"
+            subtitle="Каждый материал структурирован как методический кейс и может использоваться в рабочих совещаниях."
           />
           <div className="mt-14 grid gap-5 lg:grid-cols-12">
             {previewCases.map((c, idx) => {
@@ -177,7 +180,7 @@ export function HomePage() {
                         </p>
                       </div>
                       <span className="inline-flex items-center gap-2 text-sm font-medium text-accent-bright">
-                        Разбор кейса
+                        Открыть описание
                         <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
                       </span>
                     </div>
@@ -188,7 +191,7 @@ export function HomePage() {
           </div>
           <div className="mt-10 flex justify-center">
             <MagneticButton href="/cases" className="px-8">
-              Все кейсы
+              Полный перечень кейсов
             </MagneticButton>
           </div>
         </div>
@@ -199,9 +202,9 @@ export function HomePage() {
           <div className="grid gap-10 lg:grid-cols-12 lg:items-start">
             <div className="lg:col-span-5">
               <SectionHeader
-                eyebrow="Идея для урока"
-                title="Случайная идея — как editorial-блок"
-                subtitle="Живые сценарии из банка практики. Локально, без лишних серверов."
+                eyebrow="Методический блок"
+                title="Идея для урока из воспроизводимого банка сценариев"
+                subtitle="К формулировке прилагаются запрос к модели и вариант применения на занятии; данные загружаются с сервера после локальной или сетевой сборки сайта."
               />
             </div>
             <div className="lg:col-span-7">
@@ -218,7 +221,7 @@ export function HomePage() {
               <div className="flex flex-col gap-6 sm:flex-row sm:items-start sm:justify-between">
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-fg-subtle">
-                    Featured
+                    Главный материал
                   </p>
                   <h3 className="mt-4 font-display text-2xl font-semibold tracking-tight text-fg sm:text-3xl">
                     {featured.title}
@@ -228,7 +231,7 @@ export function HomePage() {
                   </p>
                 </div>
                 <MagneticButton href={`/blog/${featured.slug}`} className="shrink-0">
-                  Читать
+                  Читать статью
                 </MagneticButton>
               </div>
             </GlassCard>
@@ -236,27 +239,27 @@ export function HomePage() {
               <GlassCard dense glow className="flex items-start gap-3">
                 <Zap className="mt-0.5 size-5 text-teal-300" />
                 <div>
-                  <p className="text-sm font-medium text-fg">Скорость без суеты</p>
+                  <p className="text-sm font-medium text-fg">Регламентированная подготовка</p>
                   <p className="mt-3 text-sm leading-relaxed text-fg-muted">
-                    Шаблоны и пайплайны под реальные уроки.
+                    Шаблоны сценариев урока и повторно используемые конструкции запросов.
                   </p>
                 </div>
               </GlassCard>
               <GlassCard dense glow className="flex items-start gap-3">
                 <Cpu className="mt-0.5 size-5 text-accent-bright" />
                 <div>
-                  <p className="text-sm font-medium text-fg">AI как слой процесса</p>
+                  <p className="text-sm font-medium text-fg">ИИ вспомогательно, не вместо педагога</p>
                   <p className="mt-3 text-sm leading-relaxed text-fg-muted">
-                    Не замена педагогике — усиление рутины.
+                    Поддержка рутинных операций при неизменном статусе педагогического решения.
                   </p>
                 </div>
               </GlassCard>
               <GlassCard dense glow className="flex items-start gap-3">
                 <BookOpen className="mt-0.5 size-5 text-amber-200" />
                 <div>
-                  <p className="text-sm font-medium text-fg">Editorial блог</p>
+                  <p className="text-sm font-medium text-fg">Методический блог</p>
                   <p className="mt-3 text-sm leading-relaxed text-fg-muted">
-                    Методика и инструменты в спокойном темпе.
+                    Статьи о методике и инструментах в нейтральном деловом стиле.
                   </p>
                 </div>
               </GlassCard>
@@ -269,9 +272,9 @@ export function HomePage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHeader
             align="center"
-            eyebrow="Отзывы"
-            title="Коротко, по-человечески"
-            subtitle="Как в переписке после урока — без лозунгов."
+            eyebrow="Обратная связь"
+            title="Отзывы коллег"
+            subtitle="Фрагменты реальных сообщений без маркетинговой обработки."
           />
           <div className="mt-14 grid gap-5 md:grid-cols-3">
             {reviews.map((r) => (
