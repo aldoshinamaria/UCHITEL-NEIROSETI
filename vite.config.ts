@@ -6,16 +6,12 @@ import { defineConfig } from "vite";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-export default defineConfig(({ mode }) => ({
-  /**
-   * Production: относительные пути — скрипты грузятся от текущего URL (любая подпапка GitHub Pages).
-   * Dev: "/" — обычный локальный сервер.
-   */
-  base: mode === "production" ? "./" : "/",
+export default defineConfig({
+  base: "/UCHITEL-NEIROSETI/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
     },
   },
-}));
+});

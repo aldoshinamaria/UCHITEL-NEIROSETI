@@ -1,4 +1,4 @@
-/** URL к файлам из `public/` с учётом `base` в vite.config (в т.ч. `./` на GitHub Pages). */
+/** URL к файлам из `public/` с учётом `base` в vite.config. */
 export function publicUrl(filePath: string): string {
   const path = filePath.replace(/^\/+/, "");
   let base = import.meta.env.BASE_URL;
